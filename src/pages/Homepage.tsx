@@ -39,6 +39,9 @@ dans toute la Francophonie.</h2>
             <div>
               <Actuality/>
             </div>
+            <div className='flex justify-center mt-1'>
+    <Button className='bg-red-500 text-2xl px-8 py-6 text-white rounded-full'>Plus d'actualités</Button>
+    </div>
       </section>
     </section>
   )
