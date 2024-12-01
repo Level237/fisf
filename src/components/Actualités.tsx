@@ -4,7 +4,7 @@ import slide from "../assets/slide01.jpg"
 import slide2 from "../assets/slide02.jpg"
 export default function Actuality() {
   return (
-    <div className="container mx-auto p-4 grid gap-6 md:grid-cols-2 lg:max-w-7xl">
+    <div className="container mx-12 p-4 grid gap-6 md:grid-cols-2 lg:max-w-7xl">
     {/* Main Featured Article */}
     <Card className="overflow-hidden border-[0.1rem] border-[#107a5f] rounded-3xl">
       <Link to={``} className="block">
@@ -46,7 +46,7 @@ export default function Actuality() {
     {/* Secondary Articles Column */}
     <div className="space-y-6">
       {[1, 2].map((index) => (
-        <Card key={index} className="overflow-hidden border-[0.1rem] border-[#107a5f] mb-8 rounded-3xl">
+        <Card key={index} className="overflow-hidden  border-[0.1rem] border-[#107a5f] mb-8 rounded-3xl">
           <Link to={``} className="block">
             
             <CardContent className="p-6 flex items-center gap-6 ">
@@ -54,8 +54,7 @@ export default function Actuality() {
               <img
                 src={slide2}
                 alt="Super Masters Scrabble"
-                width={100}
-                height={9}
+
                 className="w-full rounded-3xl h-56 object-cover"
               />
              <div className=" bg-red-500 absolute bottom-[-10px] left-5  z-50 text-white px-2 py-1 rounded-xl ">
@@ -70,7 +69,7 @@ export default function Actuality() {
                 </h2>
                 </div>
                 <div>
-                        <p className="text-gray-600 mb-4">
+                        <p className="text-gray-600 text-sm mb-4">
                         Lorem ipsum dolor sit amet. Hic sunt eveniet est repellendus do lorem et fugiat excepturi qui sunt commodi est galisum ducimus.
                     </p>
                 </div>

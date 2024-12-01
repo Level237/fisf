@@ -4,6 +4,8 @@ import bgCalender from '../assets/BG-calendrier.jpg'
 import CalenderList from '@/components/CalenderList'
 import { Button } from '@/components/ui/button'
 import Actuality from '@/components/Actualités'
+import Rankings from '@/components/Rankings'
+import Figures from '@/components/figures'
 
 export default function Homepage() {
   return (
@@ -22,7 +24,7 @@ dans toute la Francophonie.</h2>
             </div>
 
             <div className='mx-24'>
-              <h2 className='text-[#107a5f] text-3xl font-bold'>Calendrier</h2>
+              <h2 className='text-[#00723e] text-3xl font-bold'>Calendrier</h2>
             </div>
             <div style={{ background:`url(${bgCalender})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
     className='w-full bg-[#02abee]  rounded-md relative h-[26rem] justify-start pt-20 flex flex-col items-center'>
@@ -33,7 +35,7 @@ dans toute la Francophonie.</h2>
     <Button className='bg-red-500 text-2xl px-8 py-6 text-white rounded-full'>Calendrier complet</Button>
     </div>
     <div className='mx-24'>
-              <h2 className='text-[#107a5f] text-3xl font-bold'>Actualités</h2>
+              <h2 className='text-[#00723e] text-3xl font-bold'>Actualités</h2>
             </div>
 
             <div>
@@ -42,7 +44,22 @@ dans toute la Francophonie.</h2>
             <div className='flex justify-center mt-1'>
     <Button className='bg-red-500 text-2xl px-8 py-6 text-white rounded-full'>Plus d'actualités</Button>
     </div>
+    <div>
+      <Rankings/>
+    </div>
+          <section className='w-full bg-[#00723e59] px-6 py-14 flex flex-col items-center'>
+            <div>
+              <h2 className='text-[#00723e] text-3xl font-bold'>La FISF en quelque chiffres</h2>
+            </div>
+           
+              <Figures/>
+              <div className='mt-12'>
+              <h2 className='text-[#00723e] text-3xl font-bold'>Nos Partenaires</h2>
+            </div>
+            
+          </section>
       </section>
+     
     </section>
   )
 }

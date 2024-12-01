@@ -5,7 +5,7 @@ import { Button } from './ui/button'
 import { User, User2 } from 'lucide-react'
 export default function Header() {
   return (
-    <section className='h-44 mt-[-25px] mx-12   flex flex-row justify-between items-center'>
+    <section className='h-44 mt-[-25px] mx-12 relative   flex flex-row justify-between items-center'>
             <div className='w-[50%] '>
                 <img className='w-52 h-full' src={logo} alt="" />
             </div>
@@ -14,6 +14,7 @@ export default function Header() {
             <img className='w-24 h-full' src={icon} alt="" />
             <Button className='ml-2 text-sm border rounded-full border-[#107a5f]'>Connexion <User className='fill-current w-8 h-8'/></Button>
             </div>
+            
     </section>
   )
 }
