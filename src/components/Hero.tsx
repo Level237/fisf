@@ -10,7 +10,7 @@ export default function Hero() {
           <div className=''>
             <div className='flex flex-row justify-between items-end gap-8'>
                 <h2 className='text-2xl font-semibold text-white'>La FISF</h2>
-                <Separator className='bg-white h-7 w-1' orientation='vertical' />
+                <Separator className='bg-white h-7 w-1' orientation='vertical'/>
             </div>
               
           </div>
