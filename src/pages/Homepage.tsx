@@ -9,12 +9,14 @@ import Figures from '@/components/figures'
 import { Separator } from '@/components/ui/separator'
 import { useState } from 'react'
 import { HeaderSticky } from '@/components/Header-sticky'
+import Partenariat from '@/components/Partenariat'
+import { MemberForm } from '@/components/MemberForm'
 
 export default function Homepage() {
 
   
   return (
-    <section>
+    <section className='overflow-x-hidden'>
       <Header/>
     <HeaderSticky/>
       <Hero/>
@@ -62,7 +64,17 @@ dans toute la Francophonie.</h2>
               <div className='mt-12'>
               <h2 className='text-[#00723e] text-3xl font-bold'>Nos Partenaires</h2>
             </div>
-            
+            <Partenariat/>
+            <div className='mt-6'>
+            <Button 
+                        className="w-full text-lg md:w-auto bg-[#00723e] text-white rounded-full py-6 px-8"
+                        >
+                        Classement complet
+                        </Button>
+            </div>
+          </section>
+          <section>
+            <MemberForm/>
           </section>
       </section>
      

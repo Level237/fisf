@@ -82,7 +82,7 @@ export default function Rankings() {
             </div>
     
             {/* Featured Player Card */}
-            <div className="relative bg-emerald-600  px-1 py-12 rounded-lg overflow-hidden">
+            <div className="relative bg-[#00723e]  px-1 py-12 rounded-lg overflow-hidden">
             <div style={{ transform: "translate(-50%, -50%)"  }} className='flex w-[27rem] flex-col absolute bottom-[-2rem] justify-center left-[50%] gap-4 items-center z-50'>
                     <img src={scrabble} className='w-[60rem]  ' alt="" />
                     <Button 
