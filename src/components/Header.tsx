@@ -4,6 +4,8 @@ import icon from "../assets/icon.png"
 import { Button } from './ui/button'
 import { User, User2 } from 'lucide-react'
 export default function Header() {
+
+  
   return (
     <section className='h-44 mt-[-25px] mx-12 relative   flex flex-row justify-between items-center'>
             <div className='w-[50%] '>
