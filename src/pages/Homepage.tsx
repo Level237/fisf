@@ -11,6 +11,7 @@ import { useState } from 'react'
 import { HeaderSticky } from '@/components/Header-sticky'
 import Partenariat from '@/components/Partenariat'
 import { MemberForm } from '@/components/MemberForm'
+import { Footer } from '@/components/Footer'
 
 export default function Homepage() {
 
@@ -77,7 +78,7 @@ dans toute la Francophonie.</h2>
             <MemberForm/>
           </section>
       </section>
-     
+     <Footer/>
     </section>
   )
 }
