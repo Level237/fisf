@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Homepage from "../pages/Homepage";
 import { MissionPage } from "@/pages/MissionPage";
-import { ComitePage } from "@/pages/ComitePage";
+import { CommiteePage } from "@/pages/CommiteePage";
 
 export const routes=createBrowserRouter([
     {
@@ -12,6 +12,6 @@ export const routes=createBrowserRouter([
         element:<MissionPage/>
     },{
         path:"/comités",
-        element:<ComitePage/>
+        element:<CommiteePage/>
     }
 ])

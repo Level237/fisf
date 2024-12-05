@@ -1,7 +1,9 @@
 import { HeaderSection } from "@/components/Header-section"
 import { NavSection } from "@/components/NavSection"
 import slide from "../assets/comités.jpg"
-export const ComitePage=()=>{
+import { CommiteeList } from "@/components/CommiteeList"
+import { Footer } from "@/components/Footer"
+export const CommiteePage=()=>{
 
     return (
         <section>
@@ -14,11 +16,16 @@ export const ComitePage=()=>{
 
     </div>
 
-            <section className="flex flex-col mt-12 mx-36">
+            <section className="flex flex-col mt-12 ml-36">
                 <div>
                                 <h2 className='text-[#00723e] text-3xl font-bold'>Le Comité</h2>
                         </div>
+
+                        <div className="mt-8">
+                            <CommiteeList/>
+                        </div>
             </section>
+            <Footer/>
         </section>
     )
 }
