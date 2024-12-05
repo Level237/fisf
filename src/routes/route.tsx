@@ -11,7 +11,7 @@ export const routes=createBrowserRouter([
         path:"/missions",
         element:<MissionPage/>
     },{
-        path:"/comités",
+        path:"/comites",
         element:<CommiteePage/>
     }
 ])
