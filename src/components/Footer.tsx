@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png'
+import logo from '../assets/logo-white.png'
 import icon from "../assets/icon.png"
 export const Footer=()=>{
 
