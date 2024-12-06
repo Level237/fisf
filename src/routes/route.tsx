@@ -13,5 +13,7 @@ export const routes=createBrowserRouter([
     },{
         path:"/comites",
         element:<CommiteePage/>
+    },{
+        path:"/pays/affiliés"
     }
 ])
