@@ -2,6 +2,8 @@ import { HeaderSection } from '@/components/Header-section'
 import { NavSection } from '@/components/NavSection'
 import React from 'react'
 import slide from "../assets/slideAfiliate.png"
+import AfiliateCountryList from '@/components/AfiliateCountryList'
+import { Footer } from '@/components/Footer'
 export default function AfiliateCountry() {
   return (
     <section>
@@ -18,9 +20,10 @@ export default function AfiliateCountry() {
 
     </div>
 
-    <section className="flex flex-col mt-12 ml-36">
-        
+    <section className="flex flex-col mt-12 mb-12 ml-36">
+        <AfiliateCountryList/>
     </section>
+    <Footer/>
     </section>
   )
 }
