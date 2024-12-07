@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Homepage from "../pages/Homepage";
 import { MissionPage } from "@/pages/MissionPage";
 import { CommiteePage } from "@/pages/CommiteePage";
-import AfiliateCountry from "@/pages/AfiliateCountry";
+import AfiliateCountry from "@/pages/AfiliateCountryPage";
 
 export const routes=createBrowserRouter([
     {

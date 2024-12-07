@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function AfiliateCountry() {
+export default function AfiliateCountryList() {
   return (
     <div>
       

@@ -1,4 +1,4 @@
-import flag from "../assets/cameroun.png"
+
 export const Commitee=({picture,
     username,name,post,flag}:
     {picture:string,username:string,name:string,post:string,flag:string})=>{
