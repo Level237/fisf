@@ -58,12 +58,12 @@ dans toute la Francophonie.</h2>
     </div>
           <section className='w-full bg-[#00723e59] px-6 py-14 flex flex-col items-center'>
             <div>
-              <h2 className='text-[#00723e] text-3xl font-bold'>La FISF en quelque chiffres</h2>
+              <h2 className='text-[#00723e] text-3xl max-sm:text-2xl font-bold'>La FISF en quelque chiffres</h2>
             </div>
            
               <Figures/>
               <div className='mt-12'>
-              <h2 className='text-[#00723e] text-3xl font-bold'>Nos Partenaires</h2>
+              <h2 className='text-[#00723e] text-3xl  font-bold'>Nos Partenaires</h2>
             </div>
             <Partenariat/>
             <div className='mt-6'>

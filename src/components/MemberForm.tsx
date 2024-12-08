@@ -4,8 +4,8 @@ export const MemberForm=()=>{
 
     return (
        <section className="container mt-8  flex justify-center">
-            <section className="grid grid-cols-2">
-                    <div className="relative h-full bg-red-500">
+            <section className="grid grid-cols-2 max-sm:grid-cols-1">
+                    <div className="relative max-sm:hidden h-full bg-red-500">
                                 <img
                             src={form}
                             alt="Contact form"
@@ -14,7 +14,7 @@ export const MemberForm=()=>{
                             className="absolute h-full w-full object-cover"
                             />
                     </div>
-                    <div className="bg-[#00723e] flex flex-col w-[28rem]  px-6 py-10">
+                    <div className="bg-[#00723e] max-sm:w-full flex flex-col w-[28rem]  px-6 py-10">
                                 <h2 className="text-white font-bold text-3xl">Devenez Membre</h2>
                                 <div className="mt-4 mb-2">
                                     <input type="text" placeholder="Nom" className="w-full px-6  py-4 placeholder:text-xl rounded-full" />
