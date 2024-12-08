@@ -16,7 +16,7 @@ export const CommiteeList=()=>{
     return (
 
         <section>
-                    <section className="grid grid-cols-4 gap-4 gap-y-6">
+                    <section className="grid grid-cols-4 max-sm:grid-cols-1 gap-4 gap-y-6">
                 <div>
                     <Commitee flag={cmr} picture={amede} username={"Amédée"} name={"ASSOMO"} post={"Président"}/>
                 </div>
@@ -42,7 +42,7 @@ export const CommiteeList=()=>{
                     <Commitee flag={fr} picture={louis} username={"Louis"} name={"EGGERMONT"} post={"Responsable Technique"}/>
                 </div>
         </section>
-        <div className="mt-8 flex justify-center gap-5 items-center mb-12">
+        <div className="mt-8 flex max-sm:flex-col justify-center gap-5 items-center mb-12">
                 <Commitee flag={cmr} picture={olivier} username={"olivier"} name={"ASSINOU"} post={"Directeur des opérations"}/>
                 <Commitee flag={cmr} picture={danielle} username={"Danièle"} name={"NONO"} post={"Response Communication"}/>
         </div>

@@ -32,9 +32,9 @@ import asie from "../assets/asie.png"
 export default function AfiliateCountryList() {
   return (
      <section>
-        <div className='mx-12 border mt-16 relative border-[#00723e] py-16'>
-      <div className='flex justify-center flex-col items-center'>
-            <div className='grid grid-cols-8 gap-4'>
+        <div className='mx-12 max-sm:mx-3 border mt-16 relative border-[#00723e] py-16'>
+      <div className='flex justify-center max-sm:justify-start flex-col items-center'>
+            <div className='grid max-sm:gap-y-8  max-sm:mb-8 max-sm:grid-cols-3 grid-cols-8 gap-4'>
                     <div>
                         <img src={algeria} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
@@ -61,7 +61,7 @@ export default function AfiliateCountryList() {
                         <img src={congo} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
             </div>
-            <div className='grid grid-cols-8 mt-5 gap-4'>
+            <div className='grid max-sm:gap-y-8  max-sm:mb-8 max-sm:grid-cols-3 grid-cols-8 mt-5 gap-4'>
                     <div>
                         <img src={cote} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
@@ -88,7 +88,7 @@ export default function AfiliateCountryList() {
                     </div>
                    
             </div>
-            <div className='flex items-center gap-4 mt-4 justify-center'>
+            <div className='flex items-center max-sm:grid-cols-3 max-sm:grid gap-4 mt-4 justify-center'>
             <div>
                         <img src={senegal} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
@@ -108,9 +108,9 @@ export default function AfiliateCountryList() {
             <h2 className='text-white font-bold text-3xl'>Zone Afrique</h2>
       </div>
     </div>
-    <div className='mx-12 border mt-16 relative border-[#00723e] py-16'>
+    <div className='mx-12 max-sm:mx-4 border mt-16 relative border-[#00723e] py-16'>
       <div className='flex justify-center flex-col items-center'>
-            <div className='grid grid-cols-8 gap-4'>
+            <div className='grid max-sm:grid-cols-3 grid-cols-8 gap-4'>
                     <div>
                         <img src={belgique} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
@@ -139,10 +139,10 @@ export default function AfiliateCountryList() {
             <h2 className='text-white font-bold text-3xl'>Zone Europe</h2>
       </div>
     </div>
-    <div className='flex items-center'>
-    <div className='mx-12 flex-1 border mt-16 relative border-[#00723e] py-16'>
-      <div className='flex  justify-center flex-col items-center'>
-            <div className='flex flex-1 gap-12  items-center justify-between'>
+    <div className='flex max-sm:flex-col items-center'>
+    <div className='mx-12  max-sm:mx-12 w-[90%] flex-1 border mt-16 relative border-[#00723e] py-16'>
+      <div className='flex   justify-center flex-col items-center'>
+            <div className='flex  max-sm:flex-col flex-1 gap-12  items-center justify-between'>
             <div className='bg-red-500 px-8 py-2'>
             <h2 className='text-white font-bold text-3xl'>Zone Amérique</h2>
       </div>
@@ -154,9 +154,9 @@ export default function AfiliateCountryList() {
       </div>
      
     </div>
-    <div className='border flex-1 mr-12 mt-16 relative border-[#00723e] py-16'>
-      <div className='flex justify-center flex-col items-center'>
-            <div className='flex flex-1 gap-12  items-center justify-between'>
+    <div className='border flex-1 mr-12 max-sm:mr-6 w-[90%] mt-16 relative border-[#00723e] py-16'>
+      <div className='flex  justify-center flex-col items-center'>
+            <div className='flex max-sm:flex-col flex-1 gap-12  items-center justify-between'>
             <div className='bg-red-500 px-8 py-2'>
             <h2 className='text-white font-bold text-3xl'>Zone Asie</h2>
       </div>

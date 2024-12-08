@@ -11,8 +11,8 @@ export default function AfiliateCountry() {
             <HeaderSection/>
             <NavSection/>
     </section>
-      <section className='mx-36  py-20'>
-            <h2 className='text-[#00723e] text-4xl font-bold'>Les Pays Affiliés</h2>
+      <section className='mx-36 max-sm:mx-2  py-20'>
+            <h2 className='text-[#00723e] text-4xl max-sm:text-3xl font-bold'>Les Pays Affiliés</h2>
       </section>
 
       <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
@@ -20,7 +20,7 @@ export default function AfiliateCountry() {
 
     </div>
 
-    <section className="flex flex-col mt-12 mb-12 ml-36">
+    <section className="flex flex-col mt-12 max-sm:ml-3 mb-12 ml-36">
         <AfiliateCountryList/>
     </section>
     <Footer/>
