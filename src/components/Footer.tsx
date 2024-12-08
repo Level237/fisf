@@ -6,11 +6,11 @@ export const Footer=()=>{
 
     return (
         <div className="bg-[#00723e] flex flex-col gap-12 w-full mt-5 px-6 py-12">
-                <div className="flex justify-between mx-12 items-center">
+                <div className="flex max-sm:flex-col max-sm:mx-0 max-sm:justify-start max-sm:items-start max-sm:gap-12 justify-between mx-12 items-center">
                         <div className='flex-1'>
                             <img className='w-72 h-full' src={logo} alt="" />
                         </div>
-                        <div className='flex flex-row justify-between flex-1 gap-5 items-center'>
+                        <div className='flex flex-row max-sm:flex-col max-sm:gap-12 justify-between flex-1 gap-5 items-center'>
                         <div className='flex flex-1 flex-col justify-normal'>
                                     <div>
                                         <h2 className='text-white text-lg font-normal'>Siège social FISF</h2>
@@ -33,9 +33,9 @@ export const Footer=()=>{
 
                         
                 </div>
-                <div className='flex justify-between mx-12 gap-5 items-center'>
+                <div className='flex max-sm:flex-col max-sm:mx-0 justify-between mx-12 gap-5 items-center'>
                                     <div className='flex-1'>
-                                        <h2 className='text-white w-[29rem] text-lg font-normal'>La Fédération internationale de Scrabble® francophone
+                                        <h2 className='text-white max-sm:w-full w-[29rem] text-lg font-normal'>La Fédération internationale de Scrabble® francophone
                                         (FISF) a pour missions principales de promouvoir la
                                         pratique du Scrabble® en langue française, mais aussi
                                         d’apporter à ce jeu un cadre réglementaire précis,
@@ -48,6 +48,7 @@ export const Footer=()=>{
                                                     placeholder:text-xl
                                                     rounded-none
                                                     w-[26rem]
+                                                    max-sm:w-full
                                                     h-12
                                                     px-4 py-8'/>
                                                     <Button className='bg-red-500 text-xl text-white rounded-none h-12 py-8'>Valider</Button>

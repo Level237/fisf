@@ -3,7 +3,7 @@ import { Separator } from "./ui/separator"
 export const NavSection=()=>{
 
     return (
-        <section>
+        <section className="max-sm:hidden">
             <div className='relative mx-36 bg-[#00723e] mt-[-35px]  flex gap-5 flex-row items-center  px-2 py-2 border border-white border-[0.1rem]   z-[9999] '>
           <div className=''>
             <div className='flex  flex-row  justify-between items-center gap-4'>
