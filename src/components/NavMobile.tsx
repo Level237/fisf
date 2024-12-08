@@ -4,6 +4,7 @@ import { AnimatePresence,motion } from "framer-motion";
 import { X } from 'lucide-react'
 import React from 'react';
 import { initialStore } from '@/store/store';
+import logo from "../assets/logo-white.png"
 export default function NavMobile() {
 
     const showHeader=initialStore((state)=>state.showHeader)
@@ -38,6 +39,12 @@ export default function NavMobile() {
         <React.Fragment >
             <div className=" text-white text-4xl">
             <X className='mt-4 mx-4 mb-4' onClick={()=>close()}/>
+              <div className="flex mt-2 mb-8 items-center justify-center">
+              
+              <img className='w-40 mr-8' src={logo} alt="" />
+              </div>
+            
+            
             <div
               className='flex mx-5 xl:w-50 max-xl:w-[58vw] bg-gray-100 px-2 py-3 rounded outline outline-transparent focus-within:outline-[#007bff]'>
               <input type='text' placeholder='Recherchez'

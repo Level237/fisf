@@ -25,7 +25,7 @@ export default function CalenderList() {
         {
             id:4,
             date:"22-23/02/2025",
-            title:"Couple de Gréoux & 2e étape du Grand Chelem international",
+            title:"Coupe de Gréoux & 2e étape du Grand Chelem international",
             link:"/"
         }
     ]

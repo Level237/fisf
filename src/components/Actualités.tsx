@@ -17,7 +17,7 @@ export default function Actuality() {
             className="w-full max-sm:relative rounded-3xl h-96 object-cover"
           />
         
-        <div className=" bg-red-500 hidden max-sm:block max-sm:absolute max-sm:bottom-6 max-sm:right-3 z-50 text-white p-6 rounded-3xl ">
+        <div className=" bg-red-500 hidden max-sm:block max-sm:absolute max-sm:bottom-0 max-sm:right-3 z-50 text-white p-6 rounded-3xl ">
             <div className="text-5xl max-sm:text-xl font-semibold">NOV</div>
             <div className="text-5xl max-sm:text-xl font-semibold">2025</div>
           </div>
