@@ -10,12 +10,26 @@ import Partenariat from '@/components/Partenariat'
 import { MemberForm } from '@/components/MemberForm'
 import { Footer } from '@/components/Footer'
 import NavMobile from '@/components/NavMobile'
+import { useEffect, useState } from 'react'
+import Loader from '@/components/ui/Loader'
 
 
 export default function Homepage() {
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+
+    const fetchData = async () => {
+
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      setLoading(false);
+    };
+
+    fetchData();
+  }, []);
   return (
-    <section className='overflow-x-hidden'>
+  <>
+  {!loading &&   <section className='overflow-x-hidden'>
      <NavMobile/>
       <Header/>
 
@@ -78,6 +92,9 @@ dans toute la Francophonie.</h2>
           </section>
       </section>
      <Footer/>
-    </section>
+    </section>}
+
+    {loading && <Loader/>}
+  </>
   )
 }

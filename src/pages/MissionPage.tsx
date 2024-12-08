@@ -3,10 +3,24 @@ import { NavSection } from "@/components/NavSection"
 import slide from "../assets/mission1.jpg"
 import slide2 from "../assets/slide2.jpg"
 import { Footer } from "@/components/Footer"
+import { useEffect, useState } from "react"
+import Loader from "@/components/ui/Loader"
 export const MissionPage=()=>{
+    const [loading, setLoading] = useState(true);
 
+    useEffect(() => {
+  
+      const fetchData = async () => {
+  
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        setLoading(false);
+      };
+  
+      fetchData();
+    }, []);
     return (
-        <section>
+       <>
+       {!loading &&  <section>
             <section className="flex flex-col">
                     <HeaderSection/>
                     <NavSection/>
@@ -106,6 +120,9 @@ export const MissionPage=()=>{
                     </div>
             </section>
             <Footer/>
-        </section>
+        </section>}
+
+        {loading && <Loader/>}
+       </>
     )
 }

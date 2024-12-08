@@ -4,10 +4,24 @@ import slide from "../assets/comités.jpg"
 import { CommiteeList } from "@/components/CommiteeList"
 import { Footer } from "@/components/Footer"
 import NavMobile from "@/components/NavMobile"
+import { useEffect, useState } from "react"
+import Loader from "@/components/ui/Loader"
 export const CommiteePage=()=>{
+    const [loading, setLoading] = useState(true);
 
+    useEffect(() => {
+  
+      const fetchData = async () => {
+  
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        setLoading(false);
+      };
+  
+      fetchData();
+    }, []);
     return (
-        <section>
+        <>
+        {!loading && <section>
             <section className="flex flex-col">
             <NavMobile/>
                     <HeaderSection/>
@@ -28,6 +42,9 @@ export const CommiteePage=()=>{
                         </div>
             </section>
             <Footer/>
-        </section>
+        </section>}
+
+        {loading && <Loader/>}
+        </>
     )
 }
