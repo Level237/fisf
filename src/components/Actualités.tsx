@@ -4,24 +4,27 @@ import slide from "../assets/slide01.jpg"
 import slide2 from "../assets/slide02.jpg"
 export default function Actuality() {
   return (
-    <div className="container mx-12 p-4 grid gap-6 md:grid-cols-2 lg:max-w-7xl">
+    <div className="container mx-12 max-sm:mx-2 p-4 grid gap-6 md:grid-cols-2 lg:max-w-7xl">
     {/* Main Featured Article */}
     <Card className="overflow-hidden border-[0.1rem] border-[#107a5f] rounded-3xl">
       <Link to={``} className="block">
-        <div className="relative mx-4 my-4 ">
+        <div className="relative mx-4 max-sm:mx-3 max-sm:my-3 my-4 ">
           <img
             src={slide}
             alt="Amédée ASSOMO"
             width={300}
             height={400}
-            className="w-full rounded-3xl h-96 object-cover"
+            className="w-full max-sm:relative rounded-3xl h-96 object-cover"
           />
         
-         
+        <div className=" bg-red-500 hidden max-sm:block max-sm:absolute max-sm:bottom-6 max-sm:right-3 z-50 text-white p-6 rounded-3xl ">
+            <div className="text-5xl max-sm:text-xl font-semibold">NOV</div>
+            <div className="text-5xl max-sm:text-xl font-semibold">2025</div>
+          </div>
         </div>
         <CardContent className="p-6">
         <div className="flex items-start gap-4">
-          <div className=" bg-red-500 mt-[-4rem] z-50 text-white p-6 rounded-3xl ">
+          <div className=" bg-red-500 max-sm:hidden mt-[-6rem] z-50 text-white p-6 rounded-3xl ">
             <div className="text-5xl font-semibold">NOV</div>
             <div className="text-5xl font-semibold">2025</div>
           </div>
@@ -49,7 +52,7 @@ export default function Actuality() {
         <Card key={index} className="overflow-hidden  border-[0.1rem] border-[#107a5f] mb-8 rounded-3xl">
           <Link to={``} className="block">
             
-            <CardContent className="p-6 flex items-center gap-6 ">
+            <CardContent className="p-6 flex max-sm:flex-col items-center gap-6 ">
             <div className="relative">
               <img
                 src={slide2}

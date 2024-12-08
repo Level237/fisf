@@ -23,7 +23,7 @@ export default function Homepage() {
       <Hero/>
       <section className='py-12  flex flex-col gap-12'>
             <div className='flex flex-row items-center justify-center'>
-                    <h2 className='text-2xl max-sm:text-xl text-center tracking-tight max-w-2xl'>La Fédération Internationale de Scrabble® Francophone (FISF) 
+                    <h2 className='text-2xl max-sm:text-lg text-center tracking-tight max-w-2xl'>La Fédération Internationale de Scrabble® Francophone (FISF) 
 
 promeut la pratique du Scrabble® en langue française, 
 
@@ -41,17 +41,17 @@ dans toute la Francophonie.</h2>
       
     </div>
     <div className='flex justify-center mt-10'>
-    <Button className='bg-red-500 text-2xl px-8 py-6 text-white rounded-full'>Calendrier complet</Button>
+    <Button className='bg-red-500 text-2xl max-sm:text-lg  px-8 py-6 text-white rounded-full'>Calendrier complet</Button>
     </div>
-    <div className='mx-24'>
-              <h2 className='text-[#00723e] text-3xl font-bold'>Actualités</h2>
+    <div className='mx-24 max-sm:mx-6'>
+              <h2 className='text-[#00723e] text-3xl max-sm:text-2xl  font-bold'>Actualités</h2>
             </div>
 
             <div>
               <Actuality/>
             </div>
             <div className='flex justify-center mt-1'>
-    <Button className='bg-red-500 text-2xl px-8 py-6 text-white rounded-full'>Plus d'actualités</Button>
+    <Button className='bg-red-500 text-2xl max-sm:text-lg px-8 py-6 text-white rounded-full'>Plus d'actualités</Button>
     </div>
     <div>
       <Rankings/>

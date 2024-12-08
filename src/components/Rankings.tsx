@@ -21,7 +21,7 @@ export default function Rankings() {
         <div className="container mx-auto px-4 py-8">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Rankings Section */}
-            <div className="space-y-8 mx-12">
+            <div className="space-y-8 mx-12 max-sm:mx-2">
               <div>
               <div className='mb-14'>
               <h2 className='text-[#00723e] text-3xl font-bold'>Classements</h2>
@@ -83,15 +83,15 @@ export default function Rankings() {
     
             {/* Featured Player Card */}
             <div className="relative bg-[#00723e]  px-1 py-12 rounded-lg overflow-hidden">
-            <div style={{ transform: "translate(-50%, -50%)"  }} className='flex w-[27rem] flex-col absolute bottom-[-2rem] justify-center left-[50%] gap-4 items-center z-50'>
-                    <img src={scrabble} className='w-[60rem]  ' alt="" />
+            <div style={{ transform: "translate(-50%, -50%)"  }} className='flex w-[27rem]  flex-col absolute bottom-[-2rem] justify-center left-[50%] gap-4 items-center z-50'>
+                    <img src={scrabble} className='w-[60rem] max-sm:hidden  ' alt="" />
                     <Button 
-                  className="bg-red-500 text-xl hover:bg-red-600 text-white rounded-full py-7 px-12"
+                  className="bg-red-500 max-sm:hidden text-xl hover:bg-red-600 text-white rounded-full py-7 px-12"
                 >
                   S'inscrire
                 </Button>
                 </div>
-              <div className="relative z-10 p-8 text-white max-w-[50%]">
+              <div className="relative z-10 p-8 text-white max-sm:max-w-full max-w-[50%]">
                 <h2 className="text-xl font-medium mb-4">
                   Devenez un master du Scrabble grace aux conseils et astuces du Champion du monde
                 </h2>
@@ -102,9 +102,15 @@ export default function Rankings() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                
-               
+               <div className='hidden max-sm:block'>
+               <Button 
+                  className="bg-red-500 text-xl hover:bg-red-600 text-white rounded-full py-7 px-12"
+                >
+                  S'inscrire
+                </Button>
+               </div>
               </div>
-              <div className="absolute right-0 top-0 h-full w-1/2">
+              <div className="absolute max-sm:hidden right-0 top-0 h-full w-1/2">
                 <img
                   src={tof}
                   alt="Alexis Allagnat"
