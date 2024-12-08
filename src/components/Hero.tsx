@@ -47,7 +47,7 @@ export default function Hero() {
           </div>
 </div>
   </div>
-  <div style={{ background:`url(${slide})`,backgroundPosition:" bottom 1px right -70px",backgroundSize:"cover",backgroundRepeat:"no-repeat" }}  className='hidden w-full h-96 max-sm:block'>
+  <div style={{ background:`url(${slide})`,backgroundPosition:" bottom 1px left -150px",backgroundSize:"cover",backgroundRepeat:"no-repeat" }}  className='hidden w-full h-96 max-sm:block'>
     
   </div>
    </>
