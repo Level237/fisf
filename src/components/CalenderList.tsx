@@ -30,17 +30,17 @@ export default function CalenderList() {
         }
     ]
   return (
-    <div className='bg-gray-300 absolute bottom-[-3rem]   px-16 py-6 flex flex-col'>
+    <div className='bg-gray-300 max-sm:w-full  absolute max-sm:block bottom-[-3rem] max-sm:px-3     px-16 py-6 flex flex-col'>
               {calenderList.map((calender)=>(
                 <>
-                <div key={calender.id} className='flex flex-row items-start justify-between'>
-                <div className='w-64'>
-                          <h2 className='text-3xl'>{calender.date}</h2>
+                <div key={calender.id} className='flex flex-row max-sm:gap-2  items-start justify-between'>
+                <div className='w-64 max-sm:flex-1'>
+                          <h2 className='text-3xl max-sm:text-sm'>{calender.date}</h2>
                 </div>
-                <div className='w-[30rem]'>
+                <div className='w-[30rem] max-sm:flex-1'>
 
                     
-                    <h2 className={`font-bold ${calender.id===4 ? "text-xl w-[28rem]" : "text-3xl"}`}>{calender.title}</h2>
+                    <h2 className={`font-bold max-sm:text-sm ${calender.id===4 ? "text-xl  max-sm:text-sm max-sm:w-44  w-[28rem]" : "text-3xl  max-sm:text-sm "}`}>{calender.title}</h2>
                 </div>
                 <div className='w-20'>
                     <button className='text-red-500 text-sm'>Consulter</button>

@@ -6,7 +6,7 @@ export const Footer=()=>{
         <div className="bg-[#00723e] flex flex-col gap-12 w-full mt-5 px-6 py-12">
                 <div className="flex justify-between mx-12 items-center">
                         <div className='flex-1'>
-                            <img className='w-64 h-full' src={logo} alt="" />
+                            <img className='w-72 h-full' src={logo} alt="" />
                         </div>
                         <div className='flex flex-1 flex-col justify-normal'>
                                     <div>
