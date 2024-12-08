@@ -1,4 +1,4 @@
-import React from 'react'
+
 import benin from "../assets/benin.png"
 import algeria from "../assets/algeria.png"
 import angola from "../assets/angola.png"

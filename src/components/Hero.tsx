@@ -1,5 +1,4 @@
-import React from 'react'
-import { AspectRatio } from './ui/aspect-ratio'
+
 import slide from "../assets/slide01.jpg"
 import { Separator } from './ui/separator'
 export default function Hero() {

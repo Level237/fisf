@@ -9,7 +9,7 @@ export const Commitee=({picture,
                <div className="bg-red-600 flex flex-col justify-start items-start px-8 pt-4 pb-4 left-0 bottom-0 absolute  w-full h-32 rounded-b-3xl">
                     
                         <div className=" right-0 w-full mx-4  flex items-end justify-end ">
-                            <img src={flag} className="w-10 max-sm:w-16 max-sm:h-16 absolute   h-10 " alt="" />
+                            <img src={flag} className="w-10 max-sm:w-16 max-sm:h-16 absolute   h-10 " alt={username} />
                         </div>
                         <div>
                             <h2 className="text-lg text-white font-semibold">{username}</h2>

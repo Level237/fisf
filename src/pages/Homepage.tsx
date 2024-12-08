@@ -6,9 +6,6 @@ import { Button } from '@/components/ui/button'
 import Actuality from '@/components/Actualités'
 import Rankings from '@/components/Rankings'
 import Figures from '@/components/figures'
-import { Separator } from '@/components/ui/separator'
-import { useState } from 'react'
-import { HeaderSticky } from '@/components/Header-sticky'
 import Partenariat from '@/components/Partenariat'
 import { MemberForm } from '@/components/MemberForm'
 import { Footer } from '@/components/Footer'
@@ -19,7 +16,7 @@ export default function Homepage() {
   return (
     <section className='overflow-x-hidden'>
       <Header/>
-    <HeaderSticky/>
+
       <Hero/>
       <section className='py-12  flex flex-col gap-12'>
             <div className='flex flex-row items-center justify-center'>

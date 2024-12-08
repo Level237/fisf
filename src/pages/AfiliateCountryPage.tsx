@@ -1,6 +1,5 @@
 import { HeaderSection } from '@/components/Header-section'
 import { NavSection } from '@/components/NavSection'
-import React from 'react'
 import slide from "../assets/slideAfiliate.png"
 import AfiliateCountryList from '@/components/AfiliateCountryList'
 import { Footer } from '@/components/Footer'

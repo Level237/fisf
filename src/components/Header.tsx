@@ -1,9 +1,9 @@
-import React from 'react'
+
 import logo from '../assets/logo.png'
 import logoWhite from "../assets/logo-white.png"
 import icon from "../assets/icon.png"
 import { Button } from './ui/button'
-import { User, User2 } from 'lucide-react'
+import { User } from 'lucide-react'
 export default function Header() {
 
   

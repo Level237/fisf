@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Button } from './ui/button'
 import scrabble from "../assets/scrabble.png";
 import tof from "../assets/tof-alexis.jpg";
