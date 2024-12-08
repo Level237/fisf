@@ -9,12 +9,14 @@ import Figures from '@/components/figures'
 import Partenariat from '@/components/Partenariat'
 import { MemberForm } from '@/components/MemberForm'
 import { Footer } from '@/components/Footer'
+import NavMobile from '@/components/NavMobile'
+
 
 export default function Homepage() {
 
-  
   return (
     <section className='overflow-x-hidden'>
+     <NavMobile/>
       <Header/>
 
       <Hero/>

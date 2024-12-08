@@ -3,10 +3,12 @@ import { NavSection } from '@/components/NavSection'
 import slide from "../assets/slideAfiliate.png"
 import AfiliateCountryList from '@/components/AfiliateCountryList'
 import { Footer } from '@/components/Footer'
+import NavMobile from '@/components/NavMobile'
 export default function AfiliateCountry() {
   return (
     <section>
     <section className="flex flex-col">
+    <NavMobile/>
             <HeaderSection/>
             <NavSection/>
     </section>

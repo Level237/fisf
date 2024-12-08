@@ -3,11 +3,13 @@ import { NavSection } from "@/components/NavSection"
 import slide from "../assets/comités.jpg"
 import { CommiteeList } from "@/components/CommiteeList"
 import { Footer } from "@/components/Footer"
+import NavMobile from "@/components/NavMobile"
 export const CommiteePage=()=>{
 
     return (
         <section>
             <section className="flex flex-col">
+            <NavMobile/>
                     <HeaderSection/>
                     <NavSection/>
             </section>
