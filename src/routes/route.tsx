@@ -3,6 +3,7 @@ import Homepage from "../pages/Homepage";
 import { MissionPage } from "@/pages/MissionPage";
 import { CommiteePage } from "@/pages/CommiteePage";
 import AfiliateCountry from "@/pages/AfiliateCountryPage";
+import { GetCountryAfiliatePage } from "@/pages/GetCountryAfiliatePage";
 
 export const routes=createBrowserRouter([
     {
@@ -17,5 +18,8 @@ export const routes=createBrowserRouter([
     },{
         path:"/pays/affiliés",
         element:<AfiliateCountry/>
+    },{
+        path:'/pays/affiliés/:country',
+        element:<GetCountryAfiliatePage/>
     }
 ])
