@@ -7,6 +7,7 @@ import { GetCountryAfiliatePage } from "@/pages/GetCountryAfiliatePage";
 import { MotduPresidentPage } from "@/pages/MotduPresidentPage";
 import { ActualityPage } from "@/pages/ActualityPage";
 import { BlogDetailPage } from "@/pages/BlogDetailPage";
+import { CalendrierPage } from "@/pages/CalendrierPage";
 
 
 export const routes=createBrowserRouter([
@@ -36,5 +37,9 @@ export const routes=createBrowserRouter([
     {
         path:"actualités/nouveau-president",
         element:<BlogDetailPage/>
+    },
+    {
+        path:"calendrier",
+        element:<CalendrierPage/>
     }
 ])
