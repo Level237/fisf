@@ -15,9 +15,9 @@ export default function AlaUneComponent() {
             />
           </div>
           {/* Date badge */}
-          <div className="absolute left-4 top-4 bg-red-500 text-white p-3 rounded-lg">
-            <div className="text-2xl font-bold leading-tight">NOV</div>
-            <div className="text-2xl font-bold leading-tight">2024</div>
+          <div className="absolute left-4 bottom-[-50px] bg-red-500 text-white p-3 rounded-lg">
+            <div className="text-3xl font-bold leading-tight">NOV</div>
+            <div className="text-3xl font-bold leading-tight">2024</div>
           </div>
         </div>
 
