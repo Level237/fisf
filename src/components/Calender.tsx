@@ -31,6 +31,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 import type { Competition, FilterState } from '../types/competition'
+import { Pagination } from './ui/pagination'
 
 // Sample data
 const competitions: Competition[] = [
@@ -210,13 +211,14 @@ export function CompetitionManager() {
     parties: '',
     lien: ''
   })
-
+  const [currentPage, setCurrentPage] = React.useState(1)
+  const [perPage, setPerPage] = React.useState(10)
   return (
     <div className="container mx-auto p-4 space-y-6">
       <Tabs defaultValue="duplicate">
-        <TabsList className="grid w-full grid-cols-2 mb-24">
-          <TabsTrigger value="duplicate" className="text-red-500 p-6">Compétiton Duplicate</TabsTrigger>
-          <TabsTrigger value="classique" className='text-red-500 p-6'>Compétiton Classique</TabsTrigger>
+        <TabsList className=" flex items-center justify-cent  mb-12">
+          <TabsTrigger value="duplicate" className="text-red-500 p-3">Compétiton Duplicate</TabsTrigger>
+          <TabsTrigger value="classique" className='text-red-500 p-3'>Compétiton Classique</TabsTrigger>
         </TabsList>
 
         <TabsContent value="duplicate" className="space-y-6">
@@ -365,10 +367,112 @@ export function CompetitionManager() {
               </TableBody>
             </Table>
           </div>
+          <div className="p">
+      <Pagination
+        currentPage={currentPage}
+        totalPages={758}
+        onPageChange={setCurrentPage}
+        onPerPageChange={setPerPage}
+        perPage={perPage}
+      />
+    </div>
         </TabsContent>
 
         <TabsContent value="classique">
-          {/* Implement Classique competition view here */}
+        <div className=' bg-gray-200 rounded-lg py-12 px-8'>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4  ">
+            <div className="flex gap-2">
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button variant="outline" className="w-full bg-white justify-start text-left font-normal">
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    {filter.dateStart ? format(new Date(filter.dateStart), 'P', { locale: fr }) : 'Entre'}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto bg-white p-0">
+                  <Calendar
+                    mode="single"
+                    selected={filter.dateStart ? new Date(filter.dateStart) : undefined}
+                    onSelect={(date) => setFilter(prev => ({ ...prev, dateStart: date ? date.toISOString() : '' }))}
+                  />
+                </PopoverContent>
+              </Popover>
+
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button variant="outline" className="w-full bg-white justify-start text-left font-normal">
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    {filter.dateEnd ? format(new Date(filter.dateEnd), 'P', { locale: fr }) : 'et'}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0 bg-white">
+                  <Calendar
+                    mode="single"
+                    selected={filter.dateEnd ? new Date(filter.dateEnd) : undefined}
+                    onSelect={(date) => setFilter(prev => ({ ...prev, dateEnd: date ? date.toISOString() : '' }))}
+                  />
+                </PopoverContent>
+              </Popover>
+            </div>
+
+            <Select value={filter.season} onValueChange={(value) => setFilter(prev => ({ ...prev, season: value }))}>
+              <SelectTrigger className='bg-white'>
+                <SelectValue placeholder="Saison" />
+              </SelectTrigger>
+              <SelectContent className='bg-white'>
+                <SelectItem value="2024-2025">2024-2025</SelectItem>
+                <SelectItem value="2023-2024">2023-2024</SelectItem>
+              </SelectContent>
+            </Select>
+
+            <Select value={filter.federation} onValueChange={(value) => setFilter(prev => ({ ...prev, federation: value }))}>
+              <SelectTrigger className='bg-white'>
+                <SelectValue placeholder="Fédération" />
+              </SelectTrigger>
+              <SelectContent className='bg-white'>
+                <SelectItem value="Toutes">Toutes</SelectItem>
+                <SelectItem value="CH">Suisse</SelectItem>
+                <SelectItem value="FR">France</SelectItem>
+              </SelectContent>
+            </Select>
+
+            <Select value={filter.parties} onValueChange={(value) => setFilter(prev => ({ ...prev, parties: value }))}>
+              <SelectTrigger className='bg-white'>
+                <SelectValue placeholder="Epreuves" />
+              </SelectTrigger>
+              <SelectContent className='bg-white'>
+                <SelectItem value="02">2 parties</SelectItem>
+                <SelectItem value="03">3 parties</SelectItem>
+                <SelectItem value="04">4 parties</SelectItem>
+              </SelectContent>
+            </Select>
+
+            <Select value={filter.parties} onValueChange={(value) => setFilter(prev => ({ ...prev, parties: value }))}>
+              <SelectTrigger className='bg-white'>
+                <SelectValue placeholder="Nombre de parties" />
+              </SelectTrigger>
+              <SelectContent className='bg-white'>
+                <SelectItem value="02">2 parties</SelectItem>
+                <SelectItem value="03">3 parties</SelectItem>
+                <SelectItem value="04">4 parties</SelectItem>
+              </SelectContent>
+            </Select>
+           
+            <Input
+            className='bg-white'
+              placeholder="Lien"
+              value={filter.lien}
+              onChange={(e) => setFilter(prev => ({ ...prev, lien: e.target.value }))}
+            />
+            
+            
+          </div>
+          <div className='flex items-center justify-center mt-8'>
+            <Button className="bg-green-600 px-12 hover:bg-green-700 text-white">
+              Aller
+            </Button>
+            </div>
+          </div>
         </TabsContent>
       </Tabs>
     </div>

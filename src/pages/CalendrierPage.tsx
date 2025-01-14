@@ -24,7 +24,7 @@ export const CalendrierPage=()=>{
     }, []);
     return (
        <>
-       {!loading &&  <section>
+       {!loading &&  <section className="">
             <section className="flex flex-col">
                     <HeaderSection/>
                     <NavSection/>
@@ -40,7 +40,7 @@ export const CalendrierPage=()=>{
     className=' mx-24 z-10 mt-5 max-sm:mt-0 h-96   bg-[#02abee]  rounded-md relative  justify-start pt-20 flex flex-col items-center'>
 
     </div>
-            <section className="flex flex-col mt-24 max-sm:mx-4 mx-36">
+            <section className="flex flex-col mt-10 max-sm:mx-4 mx-36 mb-24">
                     <CompetitionManager/>
 
                     
