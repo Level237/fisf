@@ -98,9 +98,7 @@ export default function Rankings() {
                 <h3 className="text-5xl font-bold mb-4">
                   Alexis Allagnat
                 </h3>
-                <p className="mb-8 text-white/90">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+               
                
                <div className='hidden max-sm:block'>
                <Button 
