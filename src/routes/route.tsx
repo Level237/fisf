@@ -4,6 +4,8 @@ import { MissionPage } from "@/pages/MissionPage";
 import { CommiteePage } from "@/pages/CommiteePage";
 import AfiliateCountry from "@/pages/AfiliateCountryPage";
 import { GetCountryAfiliatePage } from "@/pages/GetCountryAfiliatePage";
+import { MotduPresidentPage } from "@/pages/MotduPresidentPage";
+
 
 export const routes=createBrowserRouter([
     {
@@ -21,5 +23,8 @@ export const routes=createBrowserRouter([
     },{
         path:'/pays/affiliés/:country',
         element:<GetCountryAfiliatePage/>
+    },{
+        path:"mot-du-president",
+        element:<MotduPresidentPage/>
     }
 ])
