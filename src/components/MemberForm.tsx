@@ -34,17 +34,8 @@ export const MemberForm=()=>{
                                     <input type="email" placeholder="Email" className="w-full px-6  py-4 placeholder:text-xl rounded-full" />
                                 </div>
 
-                                <div className="mb-2 w-full flex flex-row items-baseline gap-3">
-                                    <input type="checkbox"  name="condition" value="Bike"/>
-                                                                    <p className="text-sm w-96 ">
-
-                                                                    Lorem ipsum dolor sit amet, consectetur
-
-                            adipiscing elit, sed do eiusmod tempor
-
-                            incididunt ut labore</p>
-                                </div>
-                                <div className="flex justify-end">
+                               
+                                <div className="flex justify-end mt-3">
                                 <Button
                   className="bg-red-500 text-lg hover:bg-red-600 text-white rounded-full py-6 px-6"
                 >
