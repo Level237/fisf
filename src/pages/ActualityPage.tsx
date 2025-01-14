@@ -5,6 +5,9 @@ import slide2 from "../assets/slide2.jpg"
 import { Footer } from "@/components/Footer"
 import { useEffect, useState } from "react"
 import Loader from "@/components/ui/Loader"
+import AlaUneComponent from "@/components/AlaUneComponent"
+import Blog from "@/components/Blog"
+import { Button } from "@/components/ui/button"
 export const ActualityPage=()=>{
     const [loading, setLoading] = useState(true);
 
@@ -32,14 +35,26 @@ export const ActualityPage=()=>{
         </div>
     </div>
 
-            <section className="flex flex-col mt-12 max-sm:mx-4 mx-36">
+            <section className="flex flex-col mt-24 max-sm:mx-4 mx-36">
                     <div>
                             <h2 className='text-[#00723e] text-3xl max-sm:text-2xl font-bold'>A la Une</h2>
                     </div>
-                    
+                    <AlaUneComponent/>
 
-                    
+                    <div className="mt-16">
+                            <h2 className='text-[#00723e] text-3xl max-sm:text-2xl font-bold'>Autres articles</h2>
+                    </div>
+                    <Blog/>
+                   
             </section>
+            <div className="flex items-center justify-center mt-8">
+                    <Button
+                                className="w-full text-lg md:w-auto bg-red-500 text-white rounded-full py-6 px-12"
+                                >
+                            Voir plus
+                    </Button>
+            </div>
+            
             <Footer/>
         </section>}
 
