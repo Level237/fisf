@@ -32,7 +32,7 @@ export const routes=createBrowserRouter([
         element:<MotduPresidentPage/>
     },
     {
-        path:"Actualités",
+        path:"Actualites",
         element:<ActualityPage/>
     },
     {

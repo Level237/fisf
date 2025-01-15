@@ -1,4 +1,5 @@
 
+import { NavLink } from "react-router-dom"
 import slide from "../assets/slide01.jpg"
 import { Separator } from './ui/separator'
 export default function Hero() {
@@ -9,26 +10,26 @@ export default function Hero() {
   <div className='absolute bg-[#00723e] h-24 flex gap-5 flex-row justify-center items-center px-12 border border-white border-[0.1rem]  top-[-2rem] z-[9999] '>
           <div className=''>
             <div className='flex  flex-row justify-between items-end gap-8'>
-                <h2 className='text-2xl cursor-pointer font-semibold text-white'>La FISF</h2>
+                <NavLink to="/" className='text-2xl cursor-pointer font-semibold text-white'>La FISF</NavLink>
                 <Separator className='bg-white h-7 w-1' orientation='vertical'/>
             </div>
           </div>
           <div className=''>
               <div className='flex flex-row justify-between items-end gap-8'>
-                  <h2 className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Actualités</h2>
+                  <NavLink to="/actualites" className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Actualités</NavLink>
                     <Separator className='bg-white h-7 w-1' orientation='vertical' />
                 </div>
               
           </div>
           <div className=''>
           <div className='flex flex-row justify-between items-end gap-8'>
-              <h2 className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Calendrier</h2>
+              <NavLink to="/calendrier" className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Calendrier</NavLink>
                 <Separator className='bg-white h-7 w-1' orientation='vertical' />
             </div>
           </div>
           <div className=''>
           <div className='flex flex-row justify-between items-end gap-8'>
-              <h2 className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Classement</h2>
+              <NavLink to="/classements" className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Classement</NavLink>
                 <Separator className='bg-white h-7 w-1' orientation='vertical' />
             </div>
           </div>
