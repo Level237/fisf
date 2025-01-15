@@ -8,6 +8,7 @@ import { MotduPresidentPage } from "@/pages/MotduPresidentPage";
 import { ActualityPage } from "@/pages/ActualityPage";
 import { BlogDetailPage } from "@/pages/BlogDetailPage";
 import { CalendrierPage } from "@/pages/CalendrierPage";
+import { ClassementPage } from "@/pages/ClassementPage";
 
 
 export const routes=createBrowserRouter([
@@ -41,5 +42,9 @@ export const routes=createBrowserRouter([
     {
         path:"calendrier",
         element:<CalendrierPage/>
+    },
+    {
+        path:'classements',
+        element:<ClassementPage/>
     }
 ])
