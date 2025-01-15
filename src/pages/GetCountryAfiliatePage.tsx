@@ -4,11 +4,10 @@ import { HeaderSection } from "@/components/Header-section";
 import NavMobile from "@/components/NavMobile";
 import { NavSection } from "@/components/NavSection";
 import Loader from "@/components/ui/Loader";
-import { useParams } from "react-router-dom"
 import slide from "../assets/slideAfiliate.png"
 import { useEffect, useState } from "react";
 export  const GetCountryAfiliatePage=()=>{
-    const {country}=useParams();
+   
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {

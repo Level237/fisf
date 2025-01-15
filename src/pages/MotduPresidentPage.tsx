@@ -1,10 +1,11 @@
 import { HeaderSection } from "@/components/Header-section"
 import { NavSection } from "@/components/NavSection"
 import slide from "../assets/motpresident.png"
-import slide2 from "../assets/slide2.jpg"
 import { Footer } from "@/components/Footer"
 import { useEffect, useState } from "react"
 import Loader from "@/components/ui/Loader"
+import NavMobile from "@/components/NavMobile"
+import Title from "@/components/ui/title"
 export const MotduPresidentPage=()=>{
     const [loading, setLoading] = useState(true);
 
@@ -23,6 +24,7 @@ export const MotduPresidentPage=()=>{
        {!loading &&  <section>
             <section className="flex flex-col">
                     <HeaderSection/>
+                    <NavMobile/>
                     <NavSection/>
             </section>
             <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
@@ -32,7 +34,7 @@ export const MotduPresidentPage=()=>{
 
             <section className="flex flex-col mt-12 max-sm:mx-4 mx-36">
                     <div>
-                            <h2 className='text-[#00723e] text-3xl max-sm:text-2xl font-bold'>Mot du Président</h2>
+                    <Title title="Mot du president"/>
                     </div>
                     <div className="mt-6">
                         <p className="text-xl max-sm:text-lg mb-5 text-justify">Chers membres de la communauté mondiale du Scrabble Francophone,

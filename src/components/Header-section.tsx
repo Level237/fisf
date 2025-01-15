@@ -3,6 +3,7 @@ import { Button } from "./ui/button"
 import logo from '../assets/logo.png'
 import logoWhite from "../assets/logo-white.png"
 import { initialStore } from "@/store/store"
+import { Link } from "react-router-dom"
 export const HeaderSection=()=>{
     const openHeader=initialStore((state)=>state.openShowHeader)
     const openHeaderMobile=()=>{
@@ -13,7 +14,9 @@ export const HeaderSection=()=>{
         <>
            <section className='h-44 mt-[-25px] max-sm:hidden mx-12 relative   flex flex-row justify-between items-center'>
         <div className='w-[50%] '>
+            <Link to={'/'}>
             <img className='w-52 h-full' src={logo} alt="" />
+            </Link>
         </div>
         <div className='w-[50%] flex flex-row justify-end items-center'>
            

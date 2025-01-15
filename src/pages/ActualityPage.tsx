@@ -1,7 +1,6 @@
 import { HeaderSection } from "@/components/Header-section"
 import { NavSection } from "@/components/NavSection"
 import slide from "../assets/BG-calendrier.jpg"
-import slide2 from "../assets/slide2.jpg"
 import { Footer } from "@/components/Footer"
 import { useEffect, useState } from "react"
 import Loader from "@/components/ui/Loader"
@@ -9,6 +8,7 @@ import AlaUneComponent from "@/components/AlaUneComponent"
 import Blog from "@/components/Blog"
 import { Button } from "@/components/ui/button"
 import NavMobile from "@/components/NavMobile"
+import Title from "@/components/ui/title"
 export const ActualityPage=()=>{
     const [loading, setLoading] = useState(true);
 
@@ -39,12 +39,12 @@ export const ActualityPage=()=>{
 
             <section className="flex flex-col mt-24 max-sm:mx-4 mx-36">
                     <div>
-                            <h2 className='text-[#00723e] text-3xl max-sm:text-2xl font-bold'>A la Une</h2>
+                    <Title title="A la une"/>
                     </div>
                     <AlaUneComponent/>
 
                     <div className="mt-16">
-                            <h2 className='text-[#00723e] text-3xl max-sm:text-2xl font-bold'>Autres articles</h2>
+                            <Title title="Autres articles"/>
                     </div>
                     <Blog/>
                    

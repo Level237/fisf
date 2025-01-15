@@ -1,4 +1,4 @@
-import React from 'react'
+
 import presi from "../assets/president.jpg"
 import { Eye, Heart } from 'lucide-react'
 import { Link } from 'react-router-dom'

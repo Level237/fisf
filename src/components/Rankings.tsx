@@ -3,6 +3,7 @@ import { Button } from './ui/button'
 import scrabble from "../assets/scrabble.png";
 import tof from "../assets/tof-alexis.jpg";
 import { Separator } from './ui/separator';
+import Title from './ui/title';
 
 export default function Rankings() {
     const duplicateRankings = [
@@ -33,8 +34,8 @@ export default function Rankings() {
     
       return (
         <div className="container mx-auto px-4 py-8">
-          <div className='mb-14 mx-12'>
-              <h2 className='text-[#00723e] text-3xl font-bold'>Classements</h2>
+          <div className='mb-14 mx-1'>
+          <Title title="Classements"/>
             </div>
           <div className="grid lg:grid-cols-3 gap-2">
             {/* Rankings Section */}

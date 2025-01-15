@@ -13,6 +13,7 @@ import NavMobile from '@/components/NavMobile'
 import { useEffect, useState } from 'react'
 import Loader from '@/components/ui/Loader'
 import { Link } from 'react-router-dom'
+import Title from '@/components/ui/title'
 
 
 export default function Homepage() {
@@ -47,7 +48,7 @@ dans toute la Francophonie.</h2>
             </div>
 
             <div className='mx-24 max-sm:mx-6 '>
-              <h2 className='text-[#00723e] max-sm:text-2xl text-3xl font-bold'>Calendrier</h2>
+            <Title title="Calendrier"/>
             </div>
             <div style={{ background:`url(${bgCalender})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
     className='w-full bg-[#02abee]  rounded-md relative h-[28rem] justify-start pt-20 flex flex-col items-center'>
@@ -62,7 +63,7 @@ dans toute la Francophonie.</h2>
     
     </div>
     <div className='mx-24 max-sm:mx-6'>
-              <h2 className='text-[#00723e] text-3xl max-sm:text-2xl  font-bold'>Actualités</h2>
+    <Title title="Actualités"/>
             </div>
 
             <div>

@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Link } from "react-router-dom"
 import slide from "../assets/slide01.jpg"
+import slide3 from "../assets/blog1.jpg"
 import slide2 from "../assets/slide02.jpg"
 export default function Actuality() {
   return (
@@ -91,7 +92,7 @@ export default function Actuality() {
             <CardContent className="p-6 flex max-sm:flex-col items-center gap-6 ">
             <div className="relative w-56">
               <img
-                src={slide2}
+                src={slide3}
                 alt="Super Masters Scrabble"
 
                 className="w-full rounded-3xl h-56 object-cover"

@@ -9,7 +9,7 @@ export const NavSection=()=>{
             <div className='relative mx-36 bg-[#00723e] mt-[-35px]  flex gap-5 flex-row items-center  px-2 py-2 border border-white border-[0.1rem]   z-[9999] '>
           <div className=''>
             <div className='flex  flex-row  justify-between items-center gap-4'>
-                <NavLink to="/"  className={`text-2xl ${location.pathname==="/" ? "bg-white text-[#00723e] px-4 py-4" : "text-white"}   cursor-pointer flex  font-bold `}>La FISF</NavLink>
+                <NavLink to="/"  className={`text-2xl ${location.pathname==="/" ? "bg-white text-[#00723e] px-4 py-4" : "text-white"} ${location.pathname==="/mot-du-president" ? " text-[#00723e] px-4 py-4" : "text-white"}   cursor-pointer flex  font-bold `}>La FISF</NavLink>
                 <Separator className='bg-white h-7 w-1' orientation='vertical'/>
             </div>
           </div>

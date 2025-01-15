@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { CalendarIcon, ChevronDownIcon } from 'lucide-react'
+import { CalendarIcon } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 
