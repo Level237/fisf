@@ -35,7 +35,7 @@ export default function NavMobile() {
                  transition={{ 
                   duration:0.7
                   }}
-              id='navbar' className=" lg:hidden  fixed z-[99999999] top-0 right-0 bottom-[100%]   w-[70vw] h-[100%]  bg-[#00723e]">
+              id='navbar' className=" lg:hidden  fixed z-[99999999] top-0 right-0 bottom-[100%]   w-[70%] h-[100%]  bg-[#00723e]">
         <React.Fragment >
             <div className=" text-white text-4xl">
             <X className='mt-4 mx-4 mb-4' onClick={()=>close()}/>
@@ -61,19 +61,24 @@ export default function NavMobile() {
             <div className="mt-[12px] ml-10 text-white font-bold text-xl flex flex-col">
             
                 <div className='mt-8' >
-                  <Link to='/'>
+                  <Link to='/' onClick={()=>closeHeader()} >
                     La FISF
                     </Link>
                 </div>
                 <div  className="mt-5">
-                  Actualités
+                <Link to='/actualites' onClick={()=>closeHeader()}>
+                    Actualités
+                    </Link>
                 </div>
                 <div onClick={()=>closeHeader()} className="mt-5">
-                <Link to='a-propos-de-nous'
+                <Link to='/calendrier'
                 className=' text-white block'>Calendrier</Link>
                 </div>
                 <div onClick={()=>closeHeader()} className="mt-5">
-                Classements
+                  <Link to='/classements'>
+                  Classements
+                  </Link>
+                
                 </div>
                 <div onClick={()=>closeHeader()} className="mt-5">
                Evènements

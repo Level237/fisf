@@ -101,7 +101,7 @@ export function Pagination({
 
         <span className="text-sm text-gray-700">Début</span>
 
-        <div className="flex items-center gap-1">
+        <div className="flex items-center max-sm:hidden gap-1">
           {getPageNumbers().map((pageNumber, index) => (
             <React.Fragment key={index}>
               {pageNumber === '...' ? (

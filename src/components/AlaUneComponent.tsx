@@ -1,6 +1,7 @@
 import React from 'react'
 import presi from "../assets/president.jpg"
 import { Eye, Heart } from 'lucide-react'
+import { Link } from 'react-router-dom'
 export default function AlaUneComponent() {
   return (
     <article className="mt-12">
@@ -23,7 +24,7 @@ export default function AlaUneComponent() {
 
         {/* Content */}
         <div className="flex-1 space-y-4">
-          <h1 className="text-2xl md:text-3xl font-bold">
+          <h1 className="text-2xl max-sm:mt-12 md:text-3xl font-bold">
             Amédée ASSOMO est le nouveau président de la Fédération International de Scrabble Francophone
           </h1>
           
@@ -39,9 +40,9 @@ export default function AlaUneComponent() {
           </div>
 
           <div className="flex items-center justify-between pt-4">
-            <a href="#" className="text-red-500 hover:text-red-600 font-medium">
+            <Link to="/actualités/nouveau-president" className="text-red-500 hover:text-red-600 font-medium">
               Lire la suite
-            </a>
+            </Link>
             <div className="flex items-center gap-4 text-gray-600">
               <div className="flex items-center gap-1">
                 <Eye className="w-5 h-5" />

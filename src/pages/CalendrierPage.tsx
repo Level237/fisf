@@ -9,6 +9,7 @@ import AlaUneComponent from "@/components/AlaUneComponent"
 import Blog from "@/components/Blog"
 import { Button } from "@/components/ui/button"
 import { CompetitionManager } from "@/components/Calender"
+import NavMobile from "@/components/NavMobile"
 export const CalendrierPage=()=>{
     const [loading, setLoading] = useState(true);
 
@@ -26,7 +27,9 @@ export const CalendrierPage=()=>{
        <>
        {!loading &&  <section className="">
             <section className="flex flex-col">
+            <NavMobile/>
                     <HeaderSection/>
+                    
                     <NavSection/>
             </section>
             <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
@@ -37,7 +40,7 @@ export const CalendrierPage=()=>{
     </div>
 
     <div style={{ background:`url(${slide2})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
-    className=' mx-24 z-10 mt-5 max-sm:mt-0 h-96   bg-[#02abee]  rounded-md relative  justify-start pt-20 flex flex-col items-center'>
+    className=' mx-24 z-10 mt-5 max-sm:mt-8 h-96 max-sm:mx-3   bg-[#02abee]  rounded-md relative  justify-start pt-20 flex flex-col items-center'>
 
     </div>
             <section className="flex flex-col mt-10 max-sm:mx-4 mx-36 mb-24">

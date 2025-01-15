@@ -37,7 +37,7 @@ import { Pagination } from './ui/pagination'
 const competitions: Competition[] = [
   {
     date: '2025-01-09',
-    federation: '',
+    federation: '🇨🇭',
     country: 'CH',
     epreuve: 'Hivernales de Montreux - TH2 du jeudi 9',
     parties: '02',
@@ -53,7 +53,7 @@ const competitions: Competition[] = [
   },
   {
     date: '2025-01-08',
-    federation: '',
+    federation: '🇧🇪',
     country: 'CH',
     epreuve: 'Mercredis BRA-QUA 2',
     parties: '02',
@@ -69,7 +69,7 @@ const competitions: Competition[] = [
   },
   {
     date: '2025-01-08',
-    federation: '',
+    federation: '🇨🇭',
     country: 'CH',
     epreuve: 'Hivernales de Montreux - TH2 du Mecredi 8',
     parties: '02',
@@ -85,7 +85,7 @@ const competitions: Competition[] = [
   },
   {
     date: '2025-01-07',
-    federation: '',
+    federation: '🇨🇭',
     country: 'CH',
     epreuve: 'Hivernales de Montreux - TH2 du mardi 7',
     parties: '02',
@@ -101,7 +101,7 @@ const competitions: Competition[] = [
   },
   {
     date: '2025-01-06',
-    federation: '',
+    federation: '🇨🇭',
     country: 'CH',
     epreuve: 'Hivernales de Montreux - TH2 du lundi 6',
     parties: '02',
@@ -117,7 +117,7 @@ const competitions: Competition[] = [
   },
   {
     date: '2025-01-05',
-    federation: '',
+    federation: '🇫🇷',
     country: 'CH',
     epreuve: 'Dunkerque TH3',
     parties: '03',
@@ -133,7 +133,7 @@ const competitions: Competition[] = [
   },
   {
     date: '2025-01-05',
-    federation: '',
+    federation: '🇫🇷',
     country: 'CH',
     epreuve: 'Championnat Départemental Yvelines 2024-2025 TH2',
     parties: '02',
@@ -149,7 +149,7 @@ const competitions: Competition[] = [
   },
   {
     date: '2025-01-05',
-    federation: '',
+    federation: '🇫🇷',
     country: 'CH',
     epreuve: '2X Le Robert Lamentin',
     parties: '03',
@@ -166,7 +166,7 @@ const competitions: Competition[] = [
 
   {
     date: '2025-01-04',
-    federation: '',
+    federation: '🇫🇷',
     country: 'CH',
     epreuve: 'Dunkerque TH2 joker',
     parties: '02',
@@ -182,7 +182,7 @@ const competitions: Competition[] = [
   },
   {
     date: '2025-01-04',
-    federation: '',
+    federation: '🇨🇭',
     country: 'CH',
     epreuve: "Hivernales de Montreux – TH4 de l'Epiphanie",
     parties: '04',
@@ -344,11 +344,7 @@ export function CompetitionManager() {
                   <TableRow className='even:bg-gray-100' key={index}>
                     <TableCell>{format(new Date(competition.date), 'dd-MM-yyyy')}</TableCell>
                     <TableCell className="flex items-center gap-2">
-                      <img
-                        src={`/flags/${competition.country.toLowerCase()}.svg`}
-                        alt={competition.country}
-                        className="w-6 h-4"
-                      />
+                      
                       {competition.federation}
                     </TableCell>
                     <TableCell className='text-red-600 underline'>{competition.epreuve}</TableCell>

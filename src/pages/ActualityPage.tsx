@@ -8,6 +8,7 @@ import Loader from "@/components/ui/Loader"
 import AlaUneComponent from "@/components/AlaUneComponent"
 import Blog from "@/components/Blog"
 import { Button } from "@/components/ui/button"
+import NavMobile from "@/components/NavMobile"
 export const ActualityPage=()=>{
     const [loading, setLoading] = useState(true);
 
@@ -26,6 +27,7 @@ export const ActualityPage=()=>{
        {!loading &&  <section>
             <section className="flex flex-col">
                     <HeaderSection/>
+                    <NavMobile/>
                     <NavSection/>
             </section>
             <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
