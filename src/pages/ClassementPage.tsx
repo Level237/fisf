@@ -7,7 +7,6 @@ import { useEffect, useState } from "react"
 import Loader from "@/components/ui/Loader"
 import champions2 from "../assets/champions2.jpg"
 import alexis from "../assets/alexis.jpg"
-import { Button } from "@/components/ui/button"
 import Champions from "@/components/Champions-classement"
 import { CompetitionManager } from "@/components/Calender"
 import NavMobile from "@/components/NavMobile"
@@ -121,11 +120,7 @@ export const ClassementPage=()=>{
               Allagnat
             </h2>
 
-            <Button 
-              className="bg-red-500 hover:bg-red-600 text-white border-0 mt-6 px-8 py-2 text-lg rounded-md"
-            >
-              S&apos;inscrire
-            </Button>
+            
           </div>
         </div>
       </div>
