@@ -8,6 +8,7 @@ import Loader from "@/components/ui/Loader"
 import AlaUneComponent from "@/components/AlaUneComponent"
 import Blog from "@/components/Blog"
 import { Button } from "@/components/ui/button"
+import { Link, ScrollRestoration } from "react-router-dom"
 export const BlogDetailPage=()=>{
     const [loading, setLoading] = useState(true);
 
@@ -25,12 +26,13 @@ export const BlogDetailPage=()=>{
        <>
        {!loading &&  <section>
             <section className="flex flex-col">
+                <ScrollRestoration/>
                     <HeaderSection/>
                     <NavSection/>
             </section>
             <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
     className='w-full z-10 mt-5 max-sm:mt-0 h-96  bg-[#02abee]  rounded-md relative  justify-start pt-20 flex flex-col items-center'>
-       <div className="absolute left-24 bottom-[-50px] bg-red-500 text-white px-8 py-6 rounded-lg">
+       <div className="absolute left-24 max-sm:left-4 bottom-[-50px] bg-red-500 text-white px-8 py-6 rounded-lg">
             <div className="text-3xl font-bold leading-tight">NOV</div>
             <div className="text-3xl font-bold leading-tight">2024</div>
           </div>
@@ -88,11 +90,12 @@ export const BlogDetailPage=()=>{
                    
             </section>
             <div className="flex items-center justify-center mt-8">
-                    <Button
+                <Link to="/actualites"><Button
                                 className="w-full text-lg md:w-auto bg-red-500 text-white rounded-full py-6 px-12"
                                 >
                             Voir plus
-                    </Button>
+                    </Button></Link>
+                    
             </div>
             
             <Footer/>

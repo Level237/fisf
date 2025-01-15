@@ -7,7 +7,7 @@ export default function Actuality() {
     <div className="container mx-12 max-sm:mx-2 p-4 grid gap-6 md:grid-cols-2 lg:max-w-7xl">
     {/* Main Featured Article */}
     <Card className="overflow-hidden border-[0.1rem] border-[#107a5f] rounded-3xl">
-      <Link to={``} className="block">
+      <Link to={`/actualités/nouveau-president`} className="block">
         <div className="relative mx-4 max-sm:mx-3 max-sm:my-3 my-4 ">
           <img
             src={slide}

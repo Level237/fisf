@@ -12,6 +12,7 @@ import { Footer } from '@/components/Footer'
 import NavMobile from '@/components/NavMobile'
 import { useEffect, useState } from 'react'
 import Loader from '@/components/ui/Loader'
+import { Link } from 'react-router-dom'
 
 
 export default function Homepage() {
@@ -57,7 +58,8 @@ dans toute la Francophonie.</h2>
       
     </div>
     <div className='flex justify-center mt-10'>
-    <Button className='bg-red-500 text-2xl max-sm:text-lg  px-8 py-6 text-white rounded-full'>Calendrier complet</Button>
+      <Link to="/calendrier"><Button className='bg-red-500 text-2xl max-sm:text-lg  px-8 py-6 text-white rounded-full'>Calendrier complet</Button></Link>
+    
     </div>
     <div className='mx-24 max-sm:mx-6'>
               <h2 className='text-[#00723e] text-3xl max-sm:text-2xl  font-bold'>Actualités</h2>
@@ -67,7 +69,8 @@ dans toute la Francophonie.</h2>
               <Actuality/>
             </div>
             <div className='flex justify-center mt-1'>
-    <Button className='bg-red-500 text-2xl max-sm:text-lg px-8 py-6 text-white rounded-full'>Plus d'actualités</Button>
+              <Link to="/actualites"><Button className='bg-red-500 text-2xl max-sm:text-lg px-8 py-6 text-white rounded-full'>Plus d'actualités</Button></Link>
+    
     </div>
     <div>
       <Rankings/>
