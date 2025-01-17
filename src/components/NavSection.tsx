@@ -78,13 +78,15 @@ export const NavSection=()=>{
           </div>
           <div className=''>
           <div className='flex flex-row justify-between items-end gap-8'>
-              <h2 className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Evènements</h2>
+            <Link to={"/en-maintenance"}><h2 className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Evènements</h2></Link>
+              
                 <Separator className='bg-white h-7 w-1' orientation='vertical' />
             </div>
           </div>
           <div className=''>
           <div className='flex flex-row justify-between items-end gap-8'>
-              <h2 className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Forum</h2>
+          <Link to={"/en-maintenance"}><h2 className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Forum</h2></Link>
+              
                 
             </div>
           </div>
