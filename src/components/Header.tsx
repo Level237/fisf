@@ -5,6 +5,7 @@ import icon from "../assets/icon.png"
 import { Button } from './ui/button'
 import { User } from 'lucide-react'
 import { initialStore } from '@/store/store'
+import { Link } from 'react-router-dom'
 export default function Header() {
 
   const openHeader=initialStore((state)=>state.openShowHeader)
@@ -18,7 +19,8 @@ export default function Header() {
     
     <section className='h-44 max-sm:hidden mt-[-25px] mx-12 relative   flex flex-row justify-between items-center'>
             <div className='w-[50%] '>
-                <img className='w-52 h-full' src={logo} alt="" />
+              <Link to={'/'}><img className='w-52 h-full' src={logo} alt="" /></Link>
+                
             </div>
             <div className='w-[50%] flex flex-row justify-end items-center'>
                 <h2 className='text-[#107a5f] text-sm mr-2'>Suivez nous</h2>

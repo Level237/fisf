@@ -47,7 +47,7 @@ export const NavSection=()=>{
                 </Link>
                 <Link
                   key={"pays"}
-                  to={"/pays/affiliés"}
+                  to={"/pays-affilies"}
                   className="block px-4 py-2 text-sm text-[#00723e] font-bold hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
                 >
                   Pays Affiliés

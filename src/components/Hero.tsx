@@ -53,7 +53,7 @@ export default function Hero() {
                 </Link>
                 <Link
                   key={"pays"}
-                  to={"/pays/affiliés"}
+                  to={"/pays-affilies"}
                   className="block px-4 py-2 text-sm text-white font-bold hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
                 >
                   Pays Affiliés

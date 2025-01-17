@@ -5,6 +5,7 @@ import slide2 from "../assets/slide2.jpg"
 import { Footer } from "@/components/Footer"
 import { useEffect, useState } from "react"
 import Loader from "@/components/ui/Loader"
+import NavMobile from "../components/NavMobile"
 export const MissionPage=()=>{
     const [loading, setLoading] = useState(true);
 
@@ -22,7 +23,8 @@ export const MissionPage=()=>{
        <>
        {!loading &&  <section>
             <section className="flex flex-col">
-                    <HeaderSection/>
+            <HeaderSection/>
+                    <NavMobile/>
                     <NavSection/>
             </section>
             <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 

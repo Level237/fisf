@@ -22,7 +22,7 @@ export const routes=createBrowserRouter([
         path:"/comites",
         element:<CommiteePage/>
     },{
-        path:"/pays/affiliés",
+        path:"/pays-affilies",
         element:<AfiliateCountry/>
     },{
         path:'/pays/affiliés/:country',

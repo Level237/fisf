@@ -23,8 +23,8 @@ export const CommiteePage=()=>{
         <>
         {!loading && <section>
             <section className="flex flex-col">
-            <NavMobile/>
-                    <HeaderSection/>
+            <HeaderSection/>
+                    <NavMobile/>
                     <NavSection/>
             </section>
             <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 

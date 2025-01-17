@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom'
 import { AnimatePresence,motion } from "framer-motion";
-import { X } from 'lucide-react'
+import { Plus, X } from 'lucide-react'
 import React from 'react';
 import { initialStore } from '@/store/store';
 import logo from "../assets/logo-white.png"
@@ -9,6 +9,10 @@ export default function NavMobile() {
 
     const showHeader=initialStore((state)=>state.showHeader)
     const closeHeader=initialStore((state)=>state.closeShowHeader)
+    const [open,setOpen]=React.useState(false)
+    const openSubMenu=()=>{
+      setOpen(true)
+    }
     const close=()=>{
          
        
@@ -61,11 +65,30 @@ export default function NavMobile() {
         
             <div className="mt-[12px] ml-10 text-white font-bold text-xl flex flex-col">
             
-                <div className='mt-8' >
+                <div className='mt-8 w-[90%] flex items-center justify-between' >
                   <Link to='/' onClick={()=>closeHeader()} >
                     La FISF
                     </Link>
+                    <div>
+                      {open && <X onClick={()=>setOpen(false)}/>}
+                        {!open && <Plus onClick={openSubMenu}/>}
+                      
+                    </div>
                 </div>
+                {open && <div className="mt-5 mx-6 mb-6 flex flex-col gap-3 underline underline-offset-4 text-md">
+                <Link to='/mot-du-president' onClick={()=>closeHeader()} >
+                    Mot du président
+                    </Link>
+                    <Link to='/missions' onClick={()=>closeHeader()} >
+                    Mission
+                    </Link>
+                    <Link to='/comites' onClick={()=>closeHeader()} >
+                    Comités
+                    </Link>
+                    <Link to='/pays-affilies' onClick={()=>closeHeader()} >
+                    Pays Affiliés
+                    </Link>
+                </div>}
                 <div  className="mt-5">
                 <Link to='/actualites' onClick={()=>closeHeader()}>
                     Actualités
