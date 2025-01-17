@@ -20,7 +20,7 @@ export const MemberForm=()=>{
                                     <input type="text" placeholder="Nom" className="w-full px-6  py-4 placeholder:text-xl rounded-full" />
                                 </div>
                                 <div className="mb-2">
-                                    <input type="text" placeholder="Prénom" className="w-full px-6 max-sm:text-2xl  py-4 placeholder:text-xl rounded-full" />
+                                    <input type="text" placeholder="Prénom" className="w-full px-6 max-sm:text-xl  py-4 placeholder:text-xl rounded-full" />
                                 </div>
                                 <div className="mb-2">
                                         <select name='nationality' id="states" className="w-full px-6  py-4 placeholder:text-xl rounded-full border border-gray-300 text-gray-900 text-sm  border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">

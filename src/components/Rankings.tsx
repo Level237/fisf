@@ -33,8 +33,8 @@ export default function Rankings() {
       ]
     
       return (
-        <div className="mx-24 max-sm:mx-0 py-8">
-          <div className='mb-14 mx-1'>
+        <div className="mx-24 max-sm:mx-0 py-8 max-sm:py-2">
+          <div className='mb-14 max-sm:mb-12 mx-1'>
           <Title title="Classements"/>
             </div>
           <div className="grid lg:grid-cols-2 gap-8">
