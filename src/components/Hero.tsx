@@ -1,6 +1,7 @@
 
 import { Link, NavLink } from "react-router-dom"
 import slide from "../assets/slide01.jpg"
+import slideMobile from "../assets/slide-mobile.jpg"
 import { Separator } from './ui/separator'
 import React from "react";
 import { AnimatePresence,motion } from "framer-motion";
@@ -95,7 +96,7 @@ export default function Hero() {
           </div>
 </div>
   </div>
-  <div style={{ background:`url(${slide})`,backgroundPosition:" bottom 1px left -150px",backgroundSize:"cover",backgroundRepeat:"no-repeat" }}  className='hidden w-full h-96 max-sm:block'>
+  <div  style={{ background:`url(${slideMobile})`,backgroundPosition:"bottom",backgroundSize:"cover",backgroundRepeat:"no-repeat" }}  className='hidden w-full  max-sm:block z-10  bg-[#02abee]  rounded-md relative h-[80vh] justify-start '>
     
   </div>
    </>
