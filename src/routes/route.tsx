@@ -25,7 +25,7 @@ export const routes=createBrowserRouter([
         path:"/pays-affilies",
         element:<AfiliateCountry/>
     },{
-        path:'/pays/affiliés/:country',
+        path:'/pays-affilies/:country',
         element:<GetCountryAfiliatePage/>
     },{
         path:"mot-du-president",

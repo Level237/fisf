@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer'
 import NavMobile from '@/components/NavMobile'
 import { useEffect, useState } from 'react'
 import Loader from '@/components/ui/Loader'
+import Title from '@/components/ui/title'
 export default function AfiliateCountry() {
 
   const [loading, setLoading] = useState(true);
@@ -29,7 +30,7 @@ export default function AfiliateCountry() {
             <NavSection/>
     </section>
       <section className='mx-36 max-sm:mx-2  py-20'>
-            <h2 className='text-[#00723e] text-4xl max-sm:text-3xl font-bold'>Les Pays Affiliés</h2>
+            <Title title="Les Pays Affiliés"></Title>
       </section>
 
       <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 

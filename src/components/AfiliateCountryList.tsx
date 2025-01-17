@@ -28,62 +28,66 @@ import united from "../assets/united-kingdom-flag-round-medium.png"
 import suisse from "../assets/switzerland-flag-round-medium.png"
 import amerique from "../assets/amerique.png"
 import asie from "../assets/asie.png"
+import TooltipChildren from "./ui/TooltipChildren"
+import { useNavigate } from "react-router-dom"
 
 export default function AfiliateCountryList() {
+    const navigate=useNavigate();
   return (
      <section>
         <div className='mx-12 max-sm:mx-3 border mt-16 relative border-[#00723e] py-16'>
       <div className='flex justify-center max-sm:justify-start flex-col items-center'>
             <div className='grid max-sm:gap-y-8  max-sm:mb-8 max-sm:grid-cols-3 grid-cols-8 gap-4'>
-                    <div>
-                        <img src={algeria} className="w-20 h-20 object-cover rounded-3xl" alt="" />
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/algeria")}>
+                        <TooltipChildren title="Algeria"><img src={algeria} className="w-20 h-20 object-cover rounded-3xl" alt="" /></TooltipChildren>
+                        
                     </div>
-                    <div>
-                        <img src={angola} className="w-20 h-20 object-cover rounded-3xl" alt="" />
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/angola")}>
+                    <TooltipChildren title="Angola"><img src={angola} className="w-20 h-20 object-cover rounded-3xl" alt="" /></TooltipChildren>
                     </div>
                    
-                    <div>
-                        <img src={benin} className="w-20 h-20 object-cover rounded-3xl" alt="" />
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/benin")}>
+                    <TooltipChildren title="Benin"><img src={benin} className="w-20 h-20 object-cover rounded-3xl" alt="" /></TooltipChildren>
                     </div>
-                    <div>
-                        <img src={burkina} className="w-20 h-20 object-cover rounded-3xl" alt="" />
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/burkina")}>
+                    <TooltipChildren title="Burkina"><img src={burkina} className="w-20 h-20 object-cover rounded-3xl" alt="" /></TooltipChildren>
                     </div>
-                    <div>
-                        <img src={cmr} className="w-20 h-20 object-cover rounded-3xl" alt="" />
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/cameroun")}>
+                    <TooltipChildren title="Cameroun"><img src={cmr} className="w-20 h-20 object-cover rounded-3xl" alt="" /></TooltipChildren>
                     </div>
-                    <div>
-                        <img src={rca} className="w-20 h-20 object-cover rounded-3xl" alt="" />
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/rca")}>
+                    <TooltipChildren title="rca"><img src={rca} className="w-20 h-20 object-cover rounded-3xl" alt="" /></TooltipChildren>
                     </div>
-                    <div>
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/rdc")}>
                         <img src={rdc} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div>
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/congo")}>
                         <img src={congo} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
             </div>
             <div className='grid max-sm:gap-y-8  max-sm:mb-8 max-sm:grid-cols-3 grid-cols-8 mt-5 gap-4'>
-                    <div>
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/cote-ivoire")}>
                         <img src={cote} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div>
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/gabon")}>
                         <img src={gabon} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div>
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/guinee")}>
                         <img src={guinea} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div>
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/maurice")}>
                         <img src={maurice} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div>
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/madagascar")}>
                         <img src={madagascar} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div>
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/mali")}>
                         <img src={mali} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div>
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/mauritanie")}>
                         <img src={mauritanie} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div>
+                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/niger")}>
                         <img src={niger} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
                    

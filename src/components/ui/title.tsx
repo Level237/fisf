@@ -1,6 +1,6 @@
 import illustration from "../../assets/illustration.png"
 
-export default function Title({title}:{title:string}) {
+export default function Title({title}:{title:any}) {
   return (
     <div className='flex items-center'>
         <img src={illustration} alt="" className="w-20 h-20" />

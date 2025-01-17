@@ -6,10 +6,15 @@ import { NavSection } from "@/components/NavSection";
 import Loader from "@/components/ui/Loader";
 import slide from "../assets/slideAfiliate.png"
 import { useEffect, useState } from "react";
+import Title from "@/components/ui/title";
+import { useParams } from "react-router-dom";
+import TooltipChildren from "@/components/ui/TooltipChildren";
+import algeria from "../assets/algeria.png"
 export  const GetCountryAfiliatePage=()=>{
    
-    const [loading, setLoading] = useState(true);
 
+    const [loading, setLoading] = useState(true);
+    const {country}=useParams();
     useEffect(() => {
   
       const fetchData = async () => {
@@ -29,7 +34,7 @@ export  const GetCountryAfiliatePage=()=>{
               <NavSection/>
       </section>
         <section className='mx-36 max-sm:mx-2  py-20'>
-              <h2 className='text-[#00723e] text-4xl max-sm:text-3xl font-bold'>Les Pays Affiliés</h2>
+              <Title title={`Pays Affilié ${country}`}></Title>
         </section>
   
         <div style={{ background:`url(${slide})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
@@ -38,7 +43,12 @@ export  const GetCountryAfiliatePage=()=>{
       </div>
   
       <section className="flex flex-col mt-12 max-sm:ml-3 mb-12 ml-36">
-          <AfiliateCountryList/>
+      <div className='  max-sm:mb-8 max-sm:grid-cols-3 grid-cols-8 gap-4'>
+                    <div >
+                        <TooltipChildren title="Algeria"><img src={algeria} className="w-20 h-20 object-cover rounded-3xl" alt="" /></TooltipChildren>
+                        
+                    </div>
+            </div>
       </section>
       <Footer/>
       </section>}
