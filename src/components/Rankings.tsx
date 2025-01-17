@@ -1,7 +1,5 @@
 
 import { Button } from './ui/button'
-import scrabble from "../assets/scrabble.png";
-import tof from "../assets/tof-alexis.jpg";
 import { Separator } from './ui/separator';
 import Title from './ui/title';
 import { Link } from 'react-router-dom';

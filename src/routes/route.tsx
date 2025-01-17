@@ -9,7 +9,6 @@ import { ActualityPage } from "@/pages/ActualityPage";
 import { BlogDetailPage } from "@/pages/BlogDetailPage";
 import { CalendrierPage } from "@/pages/CalendrierPage";
 import { ClassementPage } from "@/pages/ClassementPage";
-import MaintenanceComponent from "@/components/maintenance-component";
 import { MaintenancePage } from "@/pages/MaintenancePage";
 
 
