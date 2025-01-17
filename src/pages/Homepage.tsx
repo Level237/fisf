@@ -5,8 +5,6 @@ import CalenderList from '@/components/CalenderList'
 import { Button } from '@/components/ui/button'
 import Actuality from '@/components/Actualités'
 import Rankings from '@/components/Rankings'
-import Figures from '@/components/figures'
-import Partenariat from '@/components/Partenariat'
 import { MemberForm } from '@/components/MemberForm'
 import { Footer } from '@/components/Footer'
 import NavMobile from '@/components/NavMobile'
@@ -51,14 +49,14 @@ dans toute la Francophonie.</h2>
             <Title title="Calendrier"/>
             </div>
             <div style={{ background:`url(${bgCalender})`,backgroundPosition:"top",backgroundSize:"cover",backgroundRepeat:"no-repeat" }} 
-    className='w-full bg-[#02abee]  rounded-md relative h-[28rem] justify-start pt-20 flex flex-col items-center'>
+    className='w-full bg-[#02abee]  rounded-md relative h-[28rem] justify-start mt-[-29px] flex flex-col items-center'>
       <div className='absolute top-8'>
         <h2 className='text-4xl max-sm:text-2xl font-bold text-white'>Evenements majeurs</h2>
       </div>
       <CalenderList/>
       
     </div>
-    <div className='flex justify-center mt-10'>
+    <div className='flex justify-center mt-3'>
       <Link to="/calendrier"><Button className='bg-red-500 text-2xl max-sm:text-lg  px-8 py-6 text-white rounded-full'>Calendrier complet</Button></Link>
     
     </div>
@@ -76,24 +74,7 @@ dans toute la Francophonie.</h2>
     <div>
       <Rankings/>
     </div>
-          <section className='w-full bg-[#00723e59] px-6 py-14 flex flex-col items-center'>
-            <div>
-              <h2 className='text-[#00723e] text-3xl max-sm:text-2xl font-bold'>La FISF en quelque chiffres</h2>
-            </div>
-           
-              <Figures/>
-              <div className='mt-12'>
-              <h2 className='text-[#00723e] text-3xl  font-bold'>Nos Partenaires</h2>
-            </div>
-            <Partenariat/>
-            <div className='mt-6'>
-            <Button 
-                        className="w-full text-lg md:w-auto bg-[#00723e] text-white rounded-full py-6 px-8"
-                        >
-                        Classement complet
-                        </Button>
-            </div>
-          </section>
+
           <section>
             <MemberForm/>
           </section>

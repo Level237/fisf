@@ -5,7 +5,7 @@ import slide3 from "../assets/blog1.jpg"
 import slide2 from "../assets/slide02.jpg"
 export default function Actuality() {
   return (
-    <div className="container mx-12 max-sm:mx-2 p-4 grid gap-6 md:grid-cols-2 lg:max-w-7xl">
+    <div className=" mx-24 max-sm:mx-2 p-4 mt-[-30px] grid gap-6 md:grid-cols-2 lg:max-w-7xl">
     {/* Main Featured Article */}
     <Card className="overflow-hidden border-[0.1rem] border-[#107a5f] rounded-3xl">
       <Link to={`/actualités/nouveau-president`} className="block">
@@ -54,14 +54,14 @@ export default function Actuality() {
           <Link to={``} className="block">
             
             <CardContent className="p-6 flex max-sm:flex-col items-center gap-6 ">
-            <div className="relative w-56">
+            <div className="relative max-sm:w-full w-56">
               <img
                 src={slide2}
                 alt="Super Masters Scrabble"
 
                 className="w-full rounded-3xl h-56 object-cover"
               />
-             <div className=" bg-red-500 absolute bottom-[-10px] left-5  z-50 text-white px-2 py-1 rounded-xl ">
+             <div className=" bg-red-500 absolute bottom-[-10px] left-5  z-50 text-white max-sm:px-4 max-sm:py-4 px-2 py-1 rounded-xl ">
             <div className="text-md font-medium">DEC</div>
             <div className="text-md mt-[-5px] font-medium">2024</div>
           </div>
@@ -90,14 +90,14 @@ export default function Actuality() {
           <Link to={``} className="block">
             
             <CardContent className="p-6 flex max-sm:flex-col items-center gap-6 ">
-            <div className="relative w-56">
+            <div className="relative max-sm:w-full w-56">
               <img
                 src={slide3}
                 alt="Super Masters Scrabble"
 
                 className="w-full rounded-3xl h-56 object-cover"
               />
-             <div className=" bg-red-500 absolute bottom-[-10px] left-5  z-50 text-white px-2 py-1 rounded-xl ">
+             <div className=" bg-red-500 absolute max-sm:px-4 max-sm:py-4 bottom-[-10px] left-5  z-50 text-white px-2 py-1 rounded-xl ">
             <div className="text-md font-medium">DEC</div>
             <div className="text-md mt-[-5px] font-medium">2024</div>
           </div>
