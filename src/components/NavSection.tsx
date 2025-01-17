@@ -1,16 +1,60 @@
-import { NavLink, useLocation } from "react-router-dom"
+import { Link, NavLink, useLocation } from "react-router-dom"
 import { Separator } from "./ui/separator"
+import React from "react";
+import { AnimatePresence,motion } from "framer-motion";
 
 export const NavSection=()=>{
   let location = useLocation(); 
-  console.log(location.pathname)
+  const [isHovered, setIsHovered] = React.useState(false);
     return (
         <section className="max-sm:hidden">
             <div className='relative mx-36 bg-[#00723e] mt-[-35px]  flex gap-5 flex-row items-center  px-2 py-2 border border-white border-[0.1rem]   z-[9999] '>
           <div className=''>
-            <div className='flex  flex-row  justify-between items-center gap-4'>
+            <div onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)} className='flex relative  flex-row  justify-between items-center gap-4'>
                 <NavLink to="/"  className={`text-2xl ${location.pathname==="/" ? "bg-white text-[#00723e] px-4 py-4" : "text-white px-4 py-4"} ${location.pathname==="/mot-du-president" ? " text-[#00723e] px-4 py-4" : "text-white"}   cursor-pointer flex  font-bold `}>La FISF</NavLink>
                 <Separator className='bg-white h-7 w-1' orientation='vertical'/>
+                <AnimatePresence>
+          {isHovered && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.2 }}
+              className="absolute top-[3rem] left-[-6rem] w-48 bg-white border border-white border-[0.1rem] shadow-lg py-2 z-50"
+            >
+              
+                <Link
+                  key={"mot-president"}
+                  to={"/mot-du-president"}
+                  className="block px-4 py-2 text-sm text-[#00723e] font-bold hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                >
+                  Mot du président
+                </Link>
+                <Link
+                  key={"mission"}
+                  to={"/missions"}
+                  className="block px-4 py-2 text-sm text-[#00723e] font-bold hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                >
+                  Mission
+                </Link>
+                <Link
+                  key={"comites"}
+                  to={"/comites"}
+                  className="block px-4 py-2 text-sm text-[#00723e] font-bold hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                >
+                  Comités
+                </Link>
+                <Link
+                  key={"pays"}
+                  to={"/pays/affiliés"}
+                  className="block px-4 py-2 text-sm text-[#00723e] font-bold hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                >
+                  Pays Affiliés
+                </Link>
+            </motion.div>
+          )}
+        </AnimatePresence>
             </div>
           </div>
           <div className=''>
