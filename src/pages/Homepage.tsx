@@ -9,6 +9,7 @@ import { MemberForm } from '@/components/MemberForm'
 import { Footer } from '@/components/Footer'
 import NavMobile from '@/components/NavMobile'
 import { useEffect, useState } from 'react'
+import slide12Origine from "../assets/event.jpg"
 import Loader from '@/components/ui/Loader'
 import { Link } from 'react-router-dom'
 import Title from '@/components/ui/title'
@@ -74,7 +75,14 @@ dans toute la Francophonie.</h2>
     <div>
       <Rankings/>
     </div>
-
+    <div className="relative mb-12  mt-1 max-sm:h-28 h-full flex-2">
+          <img
+            src={slide12Origine}
+            alt="Partie de Scrabble en cours"
+            className="rounded-lg object-cover  w-full h-full"
+          />
+        
+        </div>
           <section>
             <MemberForm/>
           </section>
