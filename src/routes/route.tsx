@@ -49,7 +49,11 @@ export const routes=createBrowserRouter([
         path:'classements',
         element:<ClassementPage/>
     },{
-        path:'/en-maintenance',
+        path:'/events',
+        element:<MaintenancePage/>
+    },
+    {
+        path:'/forum',
         element:<MaintenancePage/>
     }
 ])

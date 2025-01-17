@@ -105,10 +105,14 @@ export default function NavMobile() {
                 
                 </div>
                 <div onClick={()=>closeHeader()} className="mt-5">
-               Evènements
+                <Link to='/events'>
+                  Evenements
+                  </Link>
                 </div>
                 <div onClick={()=>closeHeader()} className="mt-5">
-                Forum
+                <Link to='/forum'>
+                 Forum
+                  </Link>
                 </div>
             </div>
         </React.Fragment>

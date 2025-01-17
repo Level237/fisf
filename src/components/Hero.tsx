@@ -85,13 +85,13 @@ export default function Hero() {
           <div className=''>
           <div className='flex flex-row justify-between items-end gap-8'>
              
-          <NavLink to="/en-maintenance" className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Evenements</NavLink>
+          <NavLink to="/events" className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Evenements</NavLink>
                 <Separator className='bg-white h-7 w-1' orientation='vertical' />
             </div>
           </div>
           <div className=''>
           <div className='flex flex-row justify-between items-end gap-8'>
-          <NavLink to="/en-maintenance" className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Forum</NavLink>
+          <NavLink to="/forum" className='text-2xl cursor-pointer font-semibold ml-3 text-white'>Forum</NavLink>
                 
             </div>
           </div>
