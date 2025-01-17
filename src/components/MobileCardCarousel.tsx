@@ -1,56 +1,73 @@
-import { Card, CardContent } from "@/components/ui/card"
+import Autoplay from "embla-carousel-autoplay"
+
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Link } from "react-router-dom"
 import slide from "../assets/slide01.jpg"
 import slide3 from "../assets/blog1.jpg"
 import slide2 from "../assets/slide02.jpg"
-export default function Actuality() {
-  return (
-    <div className=" mx-24 max-sm:hidden max-sm:mx-2 p-4 mt-[-30px] grid gap-6 md:grid-cols-2 lg:max-w-7xl">
-    {/* Main Featured Article */}
-    <Card className="overflow-hidden border-[0.1rem] border-[#107a5f] rounded-3xl">
-      <Link to={`/actualités/nouveau-president`} className="block">
-        <div className="relative mx-4 max-sm:mx-3 max-sm:my-3 my-4 ">
-          <img
-            src={slide}
-            alt="Amédée ASSOMO"
-            width={300}
-            height={400}
-            className="w-full max-sm:relative rounded-3xl h-96 object-cover"
-          />
-        
-        <div className=" bg-red-500 hidden max-sm:block max-sm:absolute max-sm:bottom-0 max-sm:right-3 z-50 text-white p-6 rounded-3xl ">
-            <div className="text-5xl max-sm:text-xl font-semibold">NOV</div>
-            <div className="text-5xl max-sm:text-xl font-semibold">2024</div>
-          </div>
-        </div>
-        <CardContent className="p-6">
-        <div className="flex items-start gap-4">
-          <div className=" bg-red-500 max-sm:hidden mt-[-6rem] z-50 text-white p-6 rounded-3xl ">
-            <div className="text-5xl font-semibold">NOV</div>
-            <div className="text-5xl font-semibold">2025</div>
-          </div>
-          <div className="mt-[-1rem]">
-          <h2 className="text-2xl font-semibold mb-2">
-            Amédée ASSOMO est le nouveau président de la FISF
-          </h2>
-          <p className="text-gray-600 text-sm mb-4">
-            Après 19 ans à la tete de la FISF (2005-2024), Patrice JEANNERET a décidé de passer le flambeau. Un grand MERCI et BRAVO pour tout son travail, son engagement et sa sympathie.
-          </p>
-          <div className="flex justify-end">
-          <span className="text-red-500 text-end hover:underline">Lire plus</span>
-          </div>
-          
-          </div>
-          </div>
-          
-        </CardContent>
-      </Link>
-    </Card>
+import { Card, CardContent } from "./ui/card"
+import React from "react"
 
-    {/* Secondary Articles Column */}
-    <div className="space-y-12">
-      
-        <Card className="overflow-hidden  border-[0.1rem] border-[#107a5f] mb-8 rounded-3xl">
+// Données factices pour les cartes
+
+
+export default function MobileCardCarousel() {
+    const plugin = React.useRef(
+        Autoplay({ delay: 2000, stopOnInteraction:false, stopOnMouseEnter: true })
+      )
+  return (
+    <div className="w-full max-w-sm mx-auto px-4">
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        plugins={[plugin.current]}
+        className="w-full"
+      >
+        <CarouselContent>
+          
+            <CarouselItem key={`1`} className="md:basis-1/2 lg:basis-1/3">
+            <Card className="overflow-hidden  border-[0.1rem] border-[#107a5f] mb-8 rounded-3xl">
+          <Link to={``} className="block">
+            
+            <CardContent className="p-6 flex max-sm:flex-col items-center gap-6 ">
+            <div className="relative max-sm:w-full w-56">
+              <img
+                src={slide}
+               alt="Amédée ASSOMO"
+
+                className="w-full rounded-3xl h-56 object-cover"
+              />
+             <div className=" bg-red-500 absolute max-sm:px-4 max-sm:py-4 bottom-[-10px] left-5  z-50 text-white px-2 py-1 rounded-xl ">
+            <div className="text-md font-medium">NOV</div>
+            <div className="text-md mt-[-5px] font-medium">2024</div>
+          </div>
+            </div>
+            <div className="flex flex-col flex-1">
+                <div>
+                    <h2 className="text-xl font-semibold mb-2">
+                    Amédée ASSOMO est le nouveau président de la FISF
+                </h2>
+                </div>
+                <div>
+                        <p className="text-gray-600 text-sm mb-4">
+                        Après 19 ans à la tete de la FISF (2005-2024), Patrice JEANNERET a décidé de passer le flambeau. Un grand MERCI et BRAVO pour tout son travail, son engagement et sa sympathie.
+                    </p>
+                </div>
+              <div className="flex justify-end">
+                <Link to={`/actualités/nouveau-president`}><span className="text-red-500 hover:underline">Lire plus</span></Link>
+                    
+              </div>
+              
+            </div>
+              
+            </CardContent>
+          </Link>
+        </Card>
+            </CarouselItem>
+            <CarouselItem key={`2`} className="md:basis-1/2 lg:basis-1/3">
+            <Card className="overflow-hidden  border-[0.1rem] border-[#107a5f] mb-8 rounded-3xl">
           <Link to={``} className="block">
             
             <CardContent className="p-6 flex max-sm:flex-col items-center gap-6 ">
@@ -86,7 +103,9 @@ export default function Actuality() {
             </CardContent>
           </Link>
         </Card>
-        <Card className="overflow-hidden  border-[0.1rem] border-[#107a5f] mb-8 rounded-3xl">
+            </CarouselItem>
+            <CarouselItem key={`3`} className="md:basis-1/2 lg:basis-1/3">
+            <Card className="overflow-hidden  border-[0.1rem] border-[#107a5f] mb-8 rounded-3xl">
           <Link to={``} className="block">
             
             <CardContent className="p-6 flex max-sm:flex-col items-center gap-6 ">
@@ -122,7 +141,12 @@ export default function Actuality() {
             </CardContent>
           </Link>
         </Card>
+            </CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
     </div>
-  </div>
   )
 }
+

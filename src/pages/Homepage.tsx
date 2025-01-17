@@ -13,6 +13,7 @@ import slide12Origine from "../assets/event.jpg"
 import Loader from '@/components/ui/Loader'
 import { Link } from 'react-router-dom'
 import Title from '@/components/ui/title'
+import MobileCardCarousel from '@/components/MobileCardCarousel'
 
 
 export default function Homepage() {
@@ -66,9 +67,13 @@ dans toute la Francophonie.</h2>
             </div>
 
             <div>
+              <div className='mb-12'>
+                <MobileCardCarousel/>
+              </div>
+              
               <Actuality/>
             </div>
-            <div className='flex justify-center mt-1'>
+            <div className='flex justify-center max-sm:mt-[-4rem] mt-1'>
               <Link to="/actualites"><Button className='bg-red-500 text-2xl max-sm:text-lg px-8 py-6 text-white rounded-full'>Plus d'actualités</Button></Link>
     
     </div>
