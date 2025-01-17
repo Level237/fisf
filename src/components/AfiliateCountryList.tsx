@@ -66,28 +66,28 @@ export default function AfiliateCountryList() {
                     </div>
             </div>
             <div className='grid max-sm:gap-y-8  max-sm:mb-8 max-sm:grid-cols-3 grid-cols-8 mt-5 gap-4'>
-                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/cote-ivoire")}>
+                    <div className="cursor-pointer">
                         <img src={cote} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/gabon")}>
+                    <div className="cursor-pointer">
                         <img src={gabon} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/guinee")}>
+                    <div className="cursor-pointer">
                         <img src={guinea} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/maurice")}>
+                    <div className="cursor-pointer">
                         <img src={maurice} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/madagascar")}>
+                    <div className="cursor-pointer">
                         <img src={madagascar} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/mali")}>
+                    <div className="cursor-pointer">
                         <img src={mali} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/mauritanie")}>
+                    <div className="cursor-pointer">
                         <img src={mauritanie} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
-                    <div className="cursor-pointer" onClick={()=>navigate("/pays-affilies/niger")}>
+                    <div className="cursor-pointer">
                         <img src={niger} className="w-20 h-20 object-cover rounded-3xl" alt="" />
                     </div>
                    

@@ -1,4 +1,4 @@
-import AfiliateCountryList from "@/components/AfiliateCountryList";
+
 import { Footer } from "@/components/Footer";
 import { HeaderSection } from "@/components/Header-section";
 import NavMobile from "@/components/NavMobile";
