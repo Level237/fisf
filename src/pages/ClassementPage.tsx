@@ -10,6 +10,8 @@ import alexis from "../assets/alexis.jpg"
 import Champions from "@/components/Champions-classement"
 import { CompetitionManager } from "@/components/Calender"
 import NavMobile from "@/components/NavMobile"
+import { Button } from "@/components/ui/button"
+
 export const ClassementPage=()=>{
     const [loading, setLoading] = useState(true);
 
@@ -62,23 +64,23 @@ export const ClassementPage=()=>{
                     </div>
                     <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-5">
                             <div>
-                                    <p className="text-2xl underline max-sm:text-lg mb-5 text-justify">Le classement international de Scrabble
+                                    <p className="text-2xl text-justify underline max-sm:text-lg mb-5 text-justify">Le classement international de Scrabble
                             Duplicate au terme de la saison 2023-2024
                             est désormais disponible
                             </p>
                             <div className="mx-8">
                                 
-                                    <p className="text-2xl max-sm:text-xl">&#9679; Le Français
+                                    <p className="text-2xl max-sm:text-lg text-justify">&#9679; Le Français
                                         Antonin
                                         MICHEL,
                                         champion de France, mène devant plus
                                         de 19 000 joueurs de la francophonie.
                                         10e fois premier mondial en fin de
                                         saison en 20 ans</p> <br /> 
-                                        <p className="text-2xl max-sm:text-xl">&#9679; Le champion de France en Blitz et
+                                        <p className="text-2xl max-sm:text-lg text-justify">&#9679; Le champion de France en Blitz et
                                         Parties originales Samson TESSIER, est
                                         2e du classement</p> <br />
-                                        <p className="text-2xl  max-sm:text-xl">&#9679; Le champion du monde, également
+                                        <p className="text-2xl  max-sm:text-lg text-justify">&#9679; Le champion du monde, également
                                         français, Jean-François LACHAUD, est
                                         3e. 21e podium sur 33 classements
                                         internationaux !</p>
@@ -119,7 +121,7 @@ export const ClassementPage=()=>{
               <br />
               Allagnat
             </h2>
-
+            <Button className='bg-red-500 text-2xl max-sm:text-lg  px-8 py-6 text-white rounded-full'>S'inscrire</Button>
             
           </div>
         </div>
