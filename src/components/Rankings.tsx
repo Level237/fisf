@@ -4,6 +4,7 @@ import scrabble from "../assets/scrabble.png";
 import tof from "../assets/tof-alexis.jpg";
 import { Separator } from './ui/separator';
 import Title from './ui/title';
+import { Link } from 'react-router-dom';
 
 export default function Rankings() {
     const duplicateRankings = [
@@ -87,11 +88,12 @@ export default function Rankings() {
              
             </div>
             <div className='flex items-center justify-center mt-5'>
-                            <Button 
+              <Link to="/classements"><Button 
                         className="w-full text-lg max-sm:w-auto md:w-auto bg-red-500 hover:bg-red-600 text-white rounded-full py-6 px-8"
                         >
                         Classement complet
-                        </Button>
+                        </Button></Link>
+                            
                     </div>
             {/* Featured Player Card */}
             
