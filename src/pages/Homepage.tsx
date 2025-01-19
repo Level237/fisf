@@ -67,7 +67,7 @@ dans toute la Francophonie.</h2>
             </div>
 
             <div>
-              <div className='mb-12'>
+              <div className='mb-12 hidden max-sm:block'>
                 <MobileCardCarousel/>
               </div>
               
