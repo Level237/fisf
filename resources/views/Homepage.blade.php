@@ -3,7 +3,7 @@
 @section('content')
 <div class="relative">
     <!-- Swiper -->
-    <div class="swiper main-slider h-screen">
+    <div class="swiper -mt-20 main-slider h-screen">
         <div class="swiper-wrapper">
             <div class="swiper-slide relative">
                 <img src="https://images.unsplash.com/photo-1591635566278-624c4b54bd7e" alt="Scrabble" class="w-full h-full object-cover">
