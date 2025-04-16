@@ -225,7 +225,7 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <img src="{{ asset('assets/img/social/facebook.png') }}" alt="Facebook" class="w-10 h-10 rounded-full mr-3">
+                            <img src="{{ asset('assets/img/mission1.jpg') }}" alt="Facebook" class="w-10 h-10 rounded-full mr-3">
                             <div>
                                 <h3 class="font-semibold text-gray-900">FISF Officiel</h3>
                                 <p class="text-sm text-gray-500">Il y a 2 heures</p>
@@ -233,7 +233,7 @@
                         </div>
                         <p class="text-gray-700 mb-4">Découvrez les photos du dernier tournoi international ! Une compétition intense et des moments inoubliables.</p>
                         <div class="aspect-w-16 aspect-h-9 mb-4">
-                            <img src="{{ asset('assets/img/social/post1.jpg') }}" alt="Post Facebook" class="rounded-lg object-cover">
+                            <img src="{{ asset('assets/img/mission1.jpg') }}" alt="Post Facebook" class="rounded-lg object-cover">
                         </div>
                         <div class="flex items-center justify-between text-gray-500">
                             <div class="flex items-center">
@@ -256,13 +256,16 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <img src="{{ asset('assets/img/social/twitter.png') }}" alt="Twitter" class="w-10 h-10 rounded-full mr-3">
+                            <img src="{{ asset('assets/img/yves.jpg') }}" alt="Twitter" class="w-10 h-10 rounded-full mr-3">
                             <div>
                                 <h3 class="font-semibold text-gray-900">@FISF_Scrabble</h3>
                                 <p class="text-sm text-gray-500">Il y a 5 heures</p>
                             </div>
                         </div>
                         <p class="text-gray-700 mb-4">Les inscriptions pour le Championnat du Monde 2024 sont ouvertes ! Ne manquez pas cette opportunité unique. #Scrabble #FISF</p>
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <img src="{{ asset('assets/img/mission1.jpg') }}" alt="Post Facebook" class="rounded-lg object-cover">
+                        </div>
                         <div class="flex items-center justify-between text-gray-500">
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
@@ -284,16 +287,17 @@
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <img src="{{ asset('assets/img/social/instagram.png') }}" alt="Instagram" class="w-10 h-10 rounded-full mr-3">
+                            <img src="{{ asset('assets/img/yves.jpg') }}" alt="Instagram" class="w-10 h-10 rounded-full mr-3">
                             <div>
                                 <h3 class="font-semibold text-gray-900">fisf_scrabble</h3>
                                 <p class="text-sm text-gray-500">Il y a 1 jour</p>
                             </div>
                         </div>
-                        <div class="aspect-w-1 aspect-h-1 mb-4">
-                            <img src="{{ asset('assets/img/social/post2.jpg') }}" alt="Post Instagram" class="rounded-lg object-cover">
-                        </div>
+                        
                         <p class="text-gray-700 mb-4">Moment de partage et de convivialité lors de notre dernier atelier de formation. Le Scrabble rassemble !</p>
+                        <div class="aspect-w-1 aspect-h-1 mb-4">
+                            <img src="{{ asset('assets/img/mission1.jpg') }}" alt="Post Instagram" class="rounded-lg object-cover">
+                        </div>
                         <div class="flex items-center justify-between text-gray-500">
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
