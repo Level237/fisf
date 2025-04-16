@@ -53,11 +53,15 @@
             border-color: rgb(5 150 105);
         }
         .submenu-bg {
-            background-color: white;
+            background-color: #00723e;
             backdrop-filter: blur(8px);
         }
         .header-scrolled .submenu-bg {
             background-color: white;
+        }
+        .header-scrolled .btn-login {
+            background-color: white;
+            color: #00723e;
         }
         .mobile-menu {
             position: fixed;
@@ -208,9 +212,7 @@
                 <div class="flex items-center justify-between h-20">
                     <!-- Logo -->
                     <div class="flex-shrink-0">
-                        <a href="/" class="text-2xl font-bold text-white">
-                            FISF
-                        </a>
+                        <img src="{{ asset('assets/img/logo-white.png') }}" alt="Logo FISF" class="h-14">
                     </div>
 
                     <!-- Menu Desktop -->
@@ -275,7 +277,7 @@
                             </button>
 
                             <!-- Bouton Connexion -->
-                            <a href="#" class="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
+                            <a href="#" class="bg-emerald-600 btn-login text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
                                 Connexion
                             </a>
                         </div>
@@ -427,9 +429,10 @@
             
             // Gestion du scroll du header
             window.addEventListener('scroll', function() {
-                if (window.scrollY > 50) {
+                if (window.scrollY > 150) {
                     header.classList.remove('header-transparent');
                     header.classList.add('header-scrolled');
+
                 } else {
                     header.classList.remove('header-scrolled');
                     header.classList.add('header-transparent');
