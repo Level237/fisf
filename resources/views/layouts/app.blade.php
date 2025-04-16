@@ -31,10 +31,12 @@
             background-color: white;
             padding: 1rem;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            transition: top 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
             z-index: 60;
+            transform: translateY(-100%);
         }
         .search-bar.active {
+            transform: translateY(0);
             top: 0;
         }
         .search-input {
@@ -51,8 +53,137 @@
             border-color: rgb(5 150 105);
         }
         .submenu-bg {
-            background-color: rgb(5 150 105 / 0.95);
+            background-color: white;
             backdrop-filter: blur(8px);
+        }
+        .header-scrolled .submenu-bg {
+            background-color: white;
+        }
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.95) 0%, rgba(5, 150, 105, 0.98) 100%);
+            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 100;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+        }
+        .mobile-menu.active {
+            left: 0;
+        }
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .mobile-menu-content {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+        .mobile-menu-item {
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        .mobile-menu-item-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .mobile-menu-item-header:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .mobile-menu-item-header span {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .mobile-menu-item-header svg {
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu-item-header.active svg {
+            transform: rotate(180deg);
+        }
+        .mobile-submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .mobile-submenu.active {
+            max-height: 500px;
+        }
+        .mobile-submenu a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        .mobile-submenu a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-left-color: white;
+            padding-left: 2rem;
+        }
+        .mobile-menu-footer {
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .mobile-menu-button {
+            position: relative;
+            z-index: 101;
+        }
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 99;
+        }
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        @media (max-width: 768px) {
+            .header-buttons {
+                display: none;
+            }
+            .mobile-menu-button {
+                display: block;
+            }
+            .mobile-menu-content::-webkit-scrollbar {
+                width: 4px;
+            }
+            .mobile-menu-content::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.1);
+            }
+            .mobile-menu-content::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 2px;
+            }
         }
     </style>
 </head>
@@ -60,7 +191,14 @@
     <!-- Barre de recherche -->
     <div class="search-bar" id="searchBar">
         <div class="container mx-auto">
-            <input type="text" placeholder="Rechercher..." class="search-input">
+            <div class="flex items-center justify-between">
+                <input type="text" placeholder="Rechercher..." class="search-input">
+                <button class="ml-4 text-gray-500 hover:text-emerald-600" id="closeSearch">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -90,9 +228,9 @@
                                 À propos
                             </button>
                             <div class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 submenu-bg">
-                                <a href="#" class="block px-4 py-2 text-white hover:bg-emerald-700">Histoire</a>
-                                <a href="#" class="block px-4 py-2 text-white hover:bg-emerald-700">Organisation</a>
-                                <a href="#" class="block px-4 py-2 text-white hover:bg-emerald-700">Statuts</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Histoire</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Organisation</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Statuts</a>
                             </div>
                         </div>
 
@@ -102,9 +240,9 @@
                                 Compétitions
                             </button>
                             <div class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 submenu-bg">
-                                <a href="#" class="block px-4 py-2 text-white hover:bg-emerald-700">Calendrier</a>
-                                <a href="#" class="block px-4 py-2 text-white hover:bg-emerald-700">Résultats</a>
-                                <a href="#" class="block px-4 py-2 text-white hover:bg-emerald-700">Règlements</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Calendrier</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Résultats</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Règlements</a>
                             </div>
                         </div>
 
@@ -114,9 +252,9 @@
                                 Actualités
                             </button>
                             <div class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 submenu-bg">
-                                <a href="#" class="block px-4 py-2 text-white hover:bg-emerald-700">Articles</a>
-                                <a href="#" class="block px-4 py-2 text-white hover:bg-emerald-700">Galerie</a>
-                                <a href="#" class="block px-4 py-2 text-white hover:bg-emerald-700">Vidéos</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Articles</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Galerie</a>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Vidéos</a>
                             </div>
                         </div>
 
@@ -127,22 +265,30 @@
                             </button>
                         </div>
 
-                        <!-- Bouton Recherche -->
-                        <button id="searchButton" class="text-white hover:text-emerald-600 transition-colors">
+                        <!-- Boutons d'action -->
+                        <div class="flex items-center space-x-4">
+                            <!-- Bouton Recherche -->
+                            <button id="searchButton" class="text-white hover:text-emerald-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </button>
+
+                            <!-- Bouton Connexion -->
+                            <a href="#" class="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
+                                Connexion
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Menu Mobile -->
+                    <div class="md:hidden flex items-center space-x-4">
+                        <button id="searchButtonMobile" class="text-white hover:text-emerald-600">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                         </button>
-
-                        <!-- Bouton Connexion -->
-                        <a href="#" class="bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors">
-                            Connexion
-                        </a>
-                    </div>
-
-                    <!-- Menu Mobile -->
-                    <div class="md:hidden">
-                        <button class="text-white hover:text-emerald-600">
+                        <button id="mobileMenuButton" class="mobile-menu-button text-white hover:text-emerald-600">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
@@ -152,6 +298,83 @@
             </div>
         </nav>
     </header>
+
+    <!-- Overlay pour le menu mobile -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Menu Mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3 class="text-xl font-bold text-white">Menu</h3>
+            <button id="closeMobileMenu" class="text-white hover:text-emerald-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-item">
+                <a href="#" class="mobile-menu-item-header">
+                    <span>Accueil</span>
+                </a>
+            </div>
+
+            <div class="mobile-menu-item">
+                <div class="mobile-menu-item-header" data-submenu="about">
+                    <span>À propos</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="mobile-submenu" id="about-submenu">
+                    <a href="#">Histoire</a>
+                    <a href="#">Organisation</a>
+                    <a href="#">Statuts</a>
+                </div>
+            </div>
+
+            <div class="mobile-menu-item">
+                <div class="mobile-menu-item-header" data-submenu="competitions">
+                    <span>Compétitions</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="mobile-submenu" id="competitions-submenu">
+                    <a href="#">Calendrier</a>
+                    <a href="#">Résultats</a>
+                    <a href="#">Règlements</a>
+                </div>
+            </div>
+
+            <div class="mobile-menu-item">
+                <div class="mobile-menu-item-header" data-submenu="news">
+                    <span>Actualités</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="mobile-submenu" id="news-submenu">
+                    <a href="#">Articles</a>
+                    <a href="#">Galerie</a>
+                    <a href="#">Vidéos</a>
+                </div>
+            </div>
+
+            <div class="mobile-menu-item">
+                <a href="#" class="mobile-menu-item-header">
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <a href="#" class="block w-full bg-white text-emerald-600 px-6 py-3 rounded-lg hover:bg-emerald-50 transition-colors text-center font-medium">
+                Connexion
+            </a>
+        </div>
+    </div>
 
     <main class="pt-20">
         @yield('content')
@@ -194,7 +417,13 @@
         document.addEventListener('DOMContentLoaded', function() {
             const header = document.getElementById('main-header');
             const searchButton = document.getElementById('searchButton');
+            const searchButtonMobile = document.getElementById('searchButtonMobile');
             const searchBar = document.getElementById('searchBar');
+            const closeSearch = document.getElementById('closeSearch');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const closeMobileMenu = document.getElementById('closeMobileMenu');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
             
             // Gestion du scroll du header
             window.addEventListener('scroll', function() {
@@ -208,16 +437,56 @@
             });
 
             // Gestion de la barre de recherche
-            searchButton.addEventListener('click', function() {
+            function toggleSearch() {
                 searchBar.classList.toggle('active');
                 if (searchBar.classList.contains('active')) {
                     searchBar.querySelector('input').focus();
                 }
+            }
+
+            searchButton.addEventListener('click', toggleSearch);
+            searchButtonMobile.addEventListener('click', toggleSearch);
+            closeSearch.addEventListener('click', function() {
+                searchBar.classList.remove('active');
+            });
+
+            // Gestion du menu mobile
+            function toggleMobileMenu() {
+                mobileMenu.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            }
+
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+            closeMobileMenu.addEventListener('click', toggleMobileMenu);
+            mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+
+            // Gestion des sous-menus
+            const submenuHeaders = document.querySelectorAll('.mobile-menu-item-header[data-submenu]');
+            submenuHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const submenuId = header.getAttribute('data-submenu');
+                    const submenu = document.getElementById(`${submenuId}-submenu`);
+                    
+                    // Fermer tous les autres sous-menus
+                    document.querySelectorAll('.mobile-submenu').forEach(sm => {
+                        if (sm !== submenu) {
+                            sm.classList.remove('active');
+                            sm.previousElementSibling.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle le sous-menu actuel
+                    submenu.classList.toggle('active');
+                    header.classList.toggle('active');
+                });
             });
 
             // Fermer la barre de recherche en cliquant en dehors
             document.addEventListener('click', function(event) {
-                if (!searchBar.contains(event.target) && !searchButton.contains(event.target)) {
+                if (!searchBar.contains(event.target) && 
+                    !searchButton.contains(event.target) && 
+                    !searchButtonMobile.contains(event.target)) {
                     searchBar.classList.remove('active');
                 }
             });
