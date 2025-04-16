@@ -9,3 +9,54 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Swiper styles */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+}
+
+.swiper-pagination-bullet {
+    background: white !important;
+    opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+}
+
+/* Header styles */
+#main-header {
+    transition: all 0.3s ease-in-out;
+}
+
+#main-header.bg-white {
+    @apply shadow-lg;
+}
+
+/* Animation classes */
+.translate-y-10 {
+    transform: translateY(10px);
+}
+
+/* Custom styles */
+.hero-section {
+    height: 100vh;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: calc(100vh - 64px);
+    }
+}
