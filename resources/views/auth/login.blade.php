@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         .header-transparent {
-            background-color: transparent;
+            background-color: #00723e;
             backdrop-filter: none;
             box-shadow: none;
         }
@@ -207,7 +207,6 @@
     </div>
 
  
-
 
     <!-- Overlay pour le menu mobile -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>

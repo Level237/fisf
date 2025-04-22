@@ -14,7 +14,7 @@
                             <div class="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                                 <span class="text-white text-sm font-medium">Bienvenue à la FISF</span>
                             </div>
-                            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                            <h1 class="text-5xl md:text-5xl font-bold text-white mb-6 leading-tight">
                                 Fédération Internationale de Scrabble Francophone
                             </h1>
                             <p class="text-xl text-white/90 mb-8">
@@ -54,7 +54,7 @@
                             <div class="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                                 <span class="text-white text-sm font-medium">L'Officiel du Scrabble</span>
                             </div>
-                            <h2 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                            <h2 class="text-5xl md:text-5xl font-bold text-white mb-6 leading-tight">
                                 La référence du Scrabble francophone
                             </h2>
                             <p class="text-xl text-white/90 mb-8">

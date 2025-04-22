@@ -4,98 +4,122 @@
 <div class="relative">
     <!-- Hero Section -->
    
-
-    <!-- Événements phares -->
+    <!-- Articles Section -->
     <section class="py-16 bg-gradient-to-b from-white to-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-900 mb-3">Événements à venir</h2>
-                <p class="text-xl text-gray-600">Découvrez les prochains événements majeurs de la FISF</p>
+                <span class="text-emerald-600 font-medium text-sm uppercase tracking-wider">Restez informés</span>
+                <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-3">Actualités</h2>
+                <p class="text-xl text-gray-600">Les dernières nouvelles de la FISF</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Carte Événement 1 -->
-                <div class="group relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-emerald-800 opacity-90"></div>
-                    <div class="relative p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                                <span class="text-white text-sm font-medium">15-17 Juin 2024</span>
-                            </div>
-                            <div class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                                <span class="text-white text-xs font-medium">Paris, France</span>
-                            </div>
+            <div class="max-w-7xl mx-auto">
+                <!-- Article Principal -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                    <div class="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden">
+                        <img src="https://picsum.photos/1200/675" 
+                             alt="Championnat du monde" 
+                             class="object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"/>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="px-4 py-1.5 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">À la une</span>
+                            <span class="text-gray-500 text-sm">15 Mai 2024</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Championnat du Monde</h3>
-                        <p class="text-white/90 mb-4">Le plus grand événement de Scrabble francophone au monde.</p>
-                        <div class="flex items-center justify-between">
-                            <a href="#" class="inline-flex items-center text-white font-semibold group-hover:text-emerald-200 transition-colors">
-                                En savoir plus
-                                <svg class="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </a>
-                            <div class="flex space-x-2">
-                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs">500+ participants</span>
-                            </div>
-                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4 hover:text-emerald-600 transition-colors">
+                            Championnat du Monde 2024 : Tous les détails dévoilés
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            La FISF annonce les détails du prochain Championnat du Monde qui se tiendra à Montréal. Une édition qui s'annonce exceptionnelle avec des innovations majeures dans le format de compétition.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 group">
+                            Lire plus
+                            <svg class="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Carte Événement 2 -->
-                <div class="group relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-r from-yellow-500 to-yellow-600 opacity-90"></div>
-                    <div class="relative p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                                <span class="text-white text-sm font-medium">22-24 Juillet 2024</span>
-                            </div>
-                            <div class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                                <span class="text-white text-xs font-medium">Bruxelles, Belgique</span>
-                            </div>
+                <!-- Articles Secondaires -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="aspect-w-16 aspect-h-9 overflow-hidden">
+                            <img src="https://picsum.photos/800/450" 
+                                 alt="Nouveau système de classement" 
+                                 class="object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"/>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Coupe d'Europe</h3>
-                        <p class="text-white/90 mb-4">Compétition européenne de Scrabble francophone.</p>
-                        <div class="flex items-center justify-between">
-                            <a href="#" class="inline-flex items-center text-white font-semibold group-hover:text-yellow-200 transition-colors">
-                                En savoir plus
-                                <svg class="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                                <span class="text-gray-500 text-sm">10 Mai 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-emerald-600 transition-colors">
+                                Nouveau système de classement international
+                            </h3>
+                            <p class="text-gray-600 mb-4 line-clamp-2">
+                                La FISF modernise son système de classement pour mieux refléter les performances des joueurs.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-emerald-600 font-medium hover:text-emerald-700 group">
+                                Découvrir
+                                <svg class="w-4 h-4 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                 </svg>
                             </a>
-                            <div class="flex space-x-2">
-                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs">300+ participants</span>
-                            </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- Carte Événement 3 -->
-                <div class="group relative bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-90"></div>
-                    <div class="relative p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                                <span class="text-white text-sm font-medium">10-12 Août 2024</span>
-                            </div>
-                            <div class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                                <span class="text-white text-xs font-medium">Montréal, Canada</span>
-                            </div>
+                    <article class="bg-white rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="aspect-w-16 aspect-h-9 overflow-hidden">
+                            <img src="https://picsum.photos/800/451" 
+                                 alt="Application mobile" 
+                                 class="object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"/>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Tournoi International</h3>
-                        <p class="text-white/90 mb-4">Tournoi ouvert à tous les joueurs internationaux.</p>
-                        <div class="flex items-center justify-between">
-                            <a href="#" class="inline-flex items-center text-white font-semibold group-hover:text-blue-200 transition-colors">
-                                En savoir plus
-                                <svg class="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                                <span class="text-gray-500 text-sm">8 Mai 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-emerald-600 transition-colors">
+                                L'application mobile FISF fait peau neuve
+                            </h3>
+                            <p class="text-gray-600 mb-4 line-clamp-2">
+                                Découvrez les nouvelles fonctionnalités de l'application mobile officielle de la FISF.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-emerald-600 font-medium hover:text-emerald-700 group">
+                                Découvrir
+                                <svg class="w-4 h-4 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                 </svg>
                             </a>
-                            <div class="flex space-x-2">
-                                <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs">400+ participants</span>
-                            </div>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="bg-white rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="aspect-w-16 aspect-h-9 overflow-hidden">
+                            <img src="https://picsum.photos/800/452" 
+                                 alt="Événements à venir" 
+                                 class="object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"/>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                                <span class="text-gray-500 text-sm">5 Mai 2024</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-emerald-600 transition-colors">
+                                Calendrier des événements 2024-2025
+                            </h3>
+                            <p class="text-gray-600 mb-4 line-clamp-2">
+                                Consultez les dates des prochains tournois et championnats de la saison.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-emerald-600 font-medium hover:text-emerald-700 group">
+                                Découvrir
+                                <svg class="w-4 h-4 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>

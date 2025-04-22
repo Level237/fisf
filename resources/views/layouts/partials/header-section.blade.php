@@ -69,7 +69,7 @@
                         </button>
 
                         <!-- Bouton Connexion -->
-                        <a href="{{route('login')}}" class="bg-emerald-600 btn-login text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
+                        <a href="#" class="bg-emerald-600 btn-login text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
                             Connexion
                         </a>
                     </div>
