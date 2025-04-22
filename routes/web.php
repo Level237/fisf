@@ -12,3 +12,6 @@ Route::get('/login', function () {
 Route::get('/about', function () {
     return view('about');
 });
+Route::get('/partners', function () {
+    return view('partners');
+});
