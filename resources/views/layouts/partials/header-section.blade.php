@@ -1,4 +1,4 @@
-<header class="fixed w-full z-50 transition-all duration-300 header-transparent" id="main-header">
+<header class="fixed w-full z-50 transition-all duration-300 bg-emerald-900 border-b border-emerald-800">
     <nav>
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-20">
