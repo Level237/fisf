@@ -17,7 +17,9 @@ Route::get('/a-propos', function () {
 Route::get('/partners', function () {
     return view('partners');
 });
-
+Route::get('/mission', function () {
+    return view('mission');
+})->name('mission');
 Route::prefix('actualites')->group(function () {
     Route::get('/', function () {
         return view('news.index');
