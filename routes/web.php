@@ -52,4 +52,8 @@ Route::get('/epreuves', function () {
     return view('competitions.epreuves');
 })->name('epreuves');
 
+Route::get('/reglements', function () {
+    return view('competitions.reglements');
+})->name('reglements');
+
 

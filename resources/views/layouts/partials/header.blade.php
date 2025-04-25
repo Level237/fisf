@@ -43,7 +43,7 @@
                         </button>
                         <div class="absolute left-0 mt-2 w-56 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 submenu-bg">
                             <a href="{{route('epreuves')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Épreuves</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Règlements</a>
+                            <a href="{{route('reglements')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Règlements</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Calendrier</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Classements</a>
                         </div>
