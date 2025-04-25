@@ -16,7 +16,7 @@
                         <div class="absolute left-0 mt-2 w-56 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 submenu-bg">
                             <a href="{{route('about')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">À propos</a>
                             <a href="{{route('mission')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Mission</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Organes</a>
+                            <a href="{{route('organes')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Organes</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Membres</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Partenaires</a>
                         </div>
