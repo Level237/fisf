@@ -48,4 +48,8 @@ Route::get('/presse-medias', function () {
     return view('presse-medias');
 })->name('presse-medias');
 
+Route::get('/epreuves', function () {
+    return view('competitions.epreuves');
+})->name('epreuves');
+
 

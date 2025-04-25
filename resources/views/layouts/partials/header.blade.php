@@ -16,10 +16,10 @@
                         </button>
                         <div class="absolute left-0 mt-2 w-56 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 submenu-bg">
                             <a href="{{route('about')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">À propos</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Mission</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Organes</a>
+                            <a href="{{route('mission')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Mission</a>
+                            <a href="{{route('organes')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Organes</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Membres</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Partenaires</a>
+                            <a href="{{route('partners')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Partenaires</a>
                         </div>
                     </div>
 
@@ -29,8 +29,8 @@
                         Actualités & Médias
                         </button>
                         <div class="absolute left-0 mt-2 w-56 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 submenu-bg">
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Événements</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Presse & Médias</a>
+                            <a href="{{route('evenements')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Événements</a>
+                            <a href="{{route('presse-medias')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Presse & Médias</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Publications</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Newsletter</a>
                         </div>
@@ -42,7 +42,7 @@
                             Compétitions
                         </button>
                         <div class="absolute left-0 mt-2 w-56 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 submenu-bg">
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Épreuves</a>
+                            <a href="{{route('epreuves')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Épreuves</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Règlements</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Calendrier</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Classements</a>
