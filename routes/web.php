@@ -44,4 +44,8 @@ Route::prefix('actualites')->group(function () {
     })->name('news.publications');
 });
 
+Route::get('/presse-medias', function () {
+    return view('presse-medias');
+})->name('presse-medias');
+
 
