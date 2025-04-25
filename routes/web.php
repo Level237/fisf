@@ -11,9 +11,9 @@ Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
 
-Route::get('/about', function () {
+Route::get('/a-propos', function () {
     return view('about');
-});
+})->name('about');
 Route::get('/partners', function () {
     return view('partners');
 });

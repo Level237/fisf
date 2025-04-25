@@ -224,26 +224,41 @@
         </div>
         
         <div class="mobile-menu-content">
+            <!-- La FISF -->
             <div class="mobile-menu-item">
-                <a href="#" class="mobile-menu-item-header">
-                    <span>Accueil</span>
-                </a>
-            </div>
-
-            <div class="mobile-menu-item">
-                <div class="mobile-menu-item-header" data-submenu="about">
-                    <span>À propos</span>
+                <div class="mobile-menu-item-header" data-submenu="fisf">
+                    <span>La FISF</span>
                     <svg xmlns="https://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>
                 </div>
-                <div class="mobile-submenu" id="about-submenu">
-                    <a href="#">Histoire</a>
-                    <a href="#">Organisation</a>
-                    <a href="#">Statuts</a>
+                <div class="mobile-submenu" id="fisf-submenu">
+                    <a href="#">À propos</a>
+                    <a href="#">Mission</a>
+                    <a href="#">Organes</a>
+                    <a href="#">Membres</a>
+                    <a href="#">Partenaires</a>
                 </div>
             </div>
 
+            <!-- Actualités & Médias -->
+            <div class="mobile-menu-item">
+                <div class="mobile-menu-item-header" data-submenu="actualites">
+                    <span>Actualités & Médias</span>
+                    <svg xmlns="https://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="mobile-submenu" id="actualites-submenu">
+                    <a href="#">Événements</a>
+                    <a href="#">Annonces</a>
+                    <a href="#">Médias</a>
+                    <a href="#">Nos publications</a>
+                    <a href="#">Newsletter</a>
+                </div>
+            </div>
+
+            <!-- Compétitions -->
             <div class="mobile-menu-item">
                 <div class="mobile-menu-item-header" data-submenu="competitions">
                     <span>Compétitions</span>
@@ -252,37 +267,60 @@
                     </svg>
                 </div>
                 <div class="mobile-submenu" id="competitions-submenu">
-                    <a href="#">Calendrier</a>
-                    <a href="#">Résultats</a>
+                    <a href="#">Épreuves</a>
                     <a href="#">Règlements</a>
+                    <a href="#">Calendrier</a>
+                    <a href="#">Palmarès</a>
+                    <a href="#">Classements</a>
                 </div>
             </div>
 
+            <!-- La FISF et Vous -->
             <div class="mobile-menu-item">
-                <div class="mobile-menu-item-header" data-submenu="news">
-                    <span>Actualités</span>
+                <div class="mobile-menu-item-header" data-submenu="fisf-vous">
+                    <span>La FISF et Vous</span>
                     <svg xmlns="https://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>
                 </div>
-                <div class="mobile-submenu" id="news-submenu">
-                    <a href="#">Articles</a>
-                    <a href="#">Galerie</a>
-                    <a href="#">Vidéos</a>
+                <div class="mobile-submenu" id="fisf-vous-submenu">
+                    <a href="#">Sponsor</a>
+                    <a href="#">Partenaire</a>
+                    <a href="#">Fédération</a>
+                    <a href="#">Club</a>
+                    <a href="#">Licencié</a>
                 </div>
             </div>
 
+            <!-- Pour les Jeunes -->
             <div class="mobile-menu-item">
-                <a href="#" class="mobile-menu-item-header">
-                    <span>Contact</span>
-                </a>
+                <div class="mobile-menu-item-header" data-submenu="jeunes">
+                    <span>Pour les Jeunes</span>
+                    <svg xmlns="https://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="mobile-submenu" id="jeunes-submenu">
+                    <a href="#">Guide du formateur</a>
+                    <a href="#">Épreuves</a>
+                    <a href="#">Concours</a>
+                    <a href="#">Exploits</a>
+                    <a href="#">Classement</a>
+                </div>
             </div>
         </div>
 
         <div class="mobile-menu-footer">
-            <a href="#" class="block w-full bg-white text-emerald-600 px-6 py-3 rounded-lg hover:bg-emerald-50 transition-colors text-center font-medium">
-                Connexion
-            </a>
+            <div class="space-y-3">
+                <a href="#" class="block w-full bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors text-center font-medium">
+                    Espace privé
+                </a>
+                <div class="flex justify-center space-x-4 text-white">
+                    <a href="#" class="hover:text-emerald-200">Jouer au Scrabble</a>
+                    <span class="text-emerald-700">|</span>
+                    <a href="#" class="hover:text-emerald-200">Nous écrire</a>
+                </div>
+            </div>
         </div>
     </div>
 
