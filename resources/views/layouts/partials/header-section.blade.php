@@ -18,7 +18,7 @@
                             <a href="{{route('mission')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Mission</a>
                             <a href="{{route('organes')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Organes</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Membres</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Partenaires</a>
+                            <a href="{{route('partners')}}" class="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600">Partenaires</a>
                         </div>
                     </div>
 

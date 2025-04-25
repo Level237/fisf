@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PartnersController;
 
+Route::get('/evenements', function () {
+    return view('evenements');
+})->name('evenements');
 Route::get('/', function () {
     return view('Homepage');
 });
@@ -16,7 +19,7 @@ Route::get('/a-propos', function () {
 })->name('about');
 Route::get('/partners', function () {
     return view('partners');
-});
+})->name('partners');
 Route::get('/mission', function () {
     return view('mission');
 })->name('mission');
@@ -29,6 +32,7 @@ Route::prefix('actualites')->group(function () {
         return view('news.index');
     })->name('news.index');
     
+
     Route::get('/annonces', function () {
         return view('news.announcements');
     })->name('news.announcements');
