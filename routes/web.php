@@ -57,3 +57,10 @@ Route::get('/reglements', function () {
 })->name('reglements');
 
 
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+        })->name('admin.dashboard');
+        // Ajoute ici les autres routes admin
+
+
+
